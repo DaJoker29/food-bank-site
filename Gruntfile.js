@@ -26,6 +26,21 @@ module.exports = function(grunt) {
                 }
             }
         },
+        less: {
+            dev: {
+                files: {
+                    "public/style.css": "src/less/manifest.less",
+                }
+            },
+            prod: {
+                options: {
+                    cleancss: true,
+                },
+                files: {
+                    "public/style.min.css": "src/less/manifest.less",
+                }
+            }
+        },
         connect: {
             options: {
                 port: 7029,
@@ -57,10 +72,18 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true,
                 }
+            },
+            less: {
+                files: 'src/less/*.less',
+                tasks: ['less'],
+                options: {
+                    livereload: true,
+                }
             }
         }
     });
 
-    grunt.registerTask('prod', ['jade', 'connect:prod', 'watch']);
-    grunt.registerTask('default', ['jade', 'connect:dev', 'watch']);
+    grunt.registerTask('compile', ['jade', 'less']);
+    grunt.registerTask('prod', ['compile', 'connect:prod', 'watch']);
+    grunt.registerTask('default', ['compile', 'connect:dev', 'watch']);
 };
