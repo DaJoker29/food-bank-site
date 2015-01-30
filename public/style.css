@@ -1,3 +1,98 @@
+/* Base */
+/* Font Size Rem conversion/Pixel Fallback */
+/* Breakpoints */
+/* Transitions */
+/* Opacity */
+/* Hover Change */
+/* Colors */
+/* Breakpoints */
+/* Typography */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
+body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25.888px;
+  font-size: 1.6rem;
+  line-height: 2.5888rem; }
+
+h1,
+h2,
+h3,
+h4,
+p,
+blockquote,
+figure,
+ol,
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  display: block; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-size: inherit; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Bitter", serif; }
+
+/* Layouts */
+.site-heading {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 2rem; }
+
+.site-title {
+  float: left;
+  font-size: 28px;
+  line-height: 45.304px;
+  font-size: 2.8rem;
+  line-height: 4.5304rem;
+  font-family: "Comfortaa", cursive; }
+  .site-title:hover {
+    color: #92C5DF;
+    border-bottom: solid 1px #92C5DF; }
+
+.site-nav {
+  float: right; }
+  .site-nav li {
+    display: inline-block;
+    margin-right: 2rem; }
+    .site-nav li:hover {
+      color: #92C5DF;
+      border-bottom: solid 1px #92C5DF; }
+
+.masthead {
+  background-image: url(photos/honey.jpg);
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 50rem;
+  margin-bottom: 8rem; }
+
+/* Modules */
+/* State */
+/* Themes */
 
 /*# sourceMappingURL=style.css.map */

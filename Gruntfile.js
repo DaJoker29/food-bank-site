@@ -21,6 +21,9 @@ module.exports = function(grunt) {
             js: {
                 files: 'javascript/**/*.js',
                 tasks: ['scripts']
+            },
+            php: {
+                files: ['public/*.php', 'templates/*.php']
             }
 
         },

@@ -1,0 +1,51 @@
+/* Font Size Rem conversion/Pixel Fallback */
+@mixin font-size($size: 1.6, $line: $size * 1.618) {
+  font-size: ($size * 10) + px;
+  line-height: ($line * 10) + px; 
+  font-size: $size + rem;
+  line-height: $line + rem;
+}
+
+/* Breakpoints */
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+/* Transitions */
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+/* Opacity */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+/* Hover Change */
+
+@mixin hover() {
+    &:hover {
+      color: $light-blue;
+      border-bottom: solid 1px $light-blue;
+    }
+}

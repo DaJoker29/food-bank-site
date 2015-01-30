@@ -1,0 +1,31 @@
+.site-heading {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: $space * 2;
+}
+
+.site-title {
+    float: left;
+    @include font-size(2.8);
+    font-family: $display-font;
+    @include hover;
+}
+
+.site-nav {
+    float: right;
+    
+    li {
+        display: inline-block;
+        margin-right: $space * 2;
+        @include hover;
+    }
+}
+
+.masthead {
+    background-image: url(photos/honey.jpg);
+    -webkit-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
+    min-height: $space * 50;
+    margin-bottom: $space * 8; 
+}
