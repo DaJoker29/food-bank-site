@@ -1,4 +1,23 @@
 html {
-    font-size: 62.5%;
-    font-family: $base-font; 
+    font-family: $base-font;
+    background-color: $light-blue;
+    color: $dark-blue;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+p {
+    margin: $space;
+    font-size: 1.125em;
+    line-height: (1.5 / 1.125);
+}
+
+h1,
+h2,
+h3 {
+    font-family: $display-font; 
+    font-weight: bold;
 }

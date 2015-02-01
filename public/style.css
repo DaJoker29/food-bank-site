@@ -4,9 +4,13 @@
 /* Transitions */
 /* Opacity */
 /* Hover Change */
+/* Text Shadow */
+/* Wrap */
+/* Panel */
 /* Colors */
 /* Breakpoints */
 /* Typography */
+/* Max Width (Containers) */
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -14,11 +18,7 @@ html {
   -moz-osx-font-smoothing: grayscale; }
 
 body {
-  margin: 0;
-  font-size: 16px;
-  line-height: 25.888px;
-  font-size: 1.6rem;
-  line-height: 2.5888rem; }
+  margin: 0; }
 
 h1,
 h2,
@@ -54,44 +54,153 @@ img {
   border: 0; }
 
 html {
-  font-size: 62.5%;
-  font-family: "Bitter", serif; }
+  font-family: "Bitter", serif;
+  background-color: #92C5DF;
+  color: #37474F; }
+
+body {
+  font-size: 16px;
+  line-height: 1.5; }
+
+p {
+  margin: 1.5rem;
+  font-size: 1.125em;
+  line-height: 1.33333; }
+
+h1,
+h2,
+h3 {
+  font-family: "Comfortaa", cursive;
+  font-weight: bold; }
 
 /* Layouts */
 .site-heading {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 2rem; }
+  padding-top: 3rem;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto; }
+  @media only screen and (max-width: 900px) {
+    .site-heading {
+      text-align: center; } }
 
 .site-title {
   float: left;
-  font-size: 28px;
-  line-height: 45.304px;
-  font-size: 2.8rem;
-  line-height: 4.5304rem;
-  font-family: "Comfortaa", cursive; }
-  .site-title:hover {
+  margin-left: 1.5rem;
+  font-size: 2.618rem;
+  line-height: 1.14591;
+  margin-top: 0.57296;
+  margin-bottom: 0.57296;
+  text-shadow: 0.15rem 0.15rem 0 #F5F5F5; }
+  .site-title a:hover {
     color: #92C5DF;
     border-bottom: solid 1px #92C5DF; }
+    @media only screen and (max-width: 900px) {
+      .site-title a:hover {
+        border: none; } }
+  @media only screen and (max-width: 900px) {
+    .site-title {
+      margin: 0 auto;
+      width: 100%;
+      padding-bottom: 1.5rem; } }
 
 .site-nav {
-  float: right; }
+  float: right;
+  color: #F5F5F5;
+  text-shadow: 0.15rem 0.15rem 0 #37474F; }
+  @media only screen and (max-width: 900px) {
+    .site-nav {
+      width: 100%; } }
   .site-nav li {
+    font-size: 1.618rem;
+    line-height: 0.92707;
+    margin: 0.92707 0;
     display: inline-block;
-    margin-right: 2rem; }
-    .site-nav li:hover {
+    margin-right: 1.5rem;
+    padding-bottom: 1.5rem; }
+    .site-nav li a:hover {
       color: #92C5DF;
       border-bottom: solid 1px #92C5DF; }
+      @media only screen and (max-width: 900px) {
+        .site-nav li a:hover {
+          border: none; } }
+    @media only screen and (max-width: 900px) {
+      .site-nav li {
+        width: 45%; } }
 
+.wrap {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.section {
+  margin: 0 3rem 3rem;
+  padding: 0 1.5rem;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.section-heading {
+  font-size: 1.82rem;
+  line-height: 1.64835;
+  margin: 0.82418 0; }
+
+footer {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  padding-bottom: 3rem; }
+  footer small {
+    font-size: 0.695rem;
+    line-height: 2.15827; }
+  footer a {
+    font-weight: bold; }
+
+/* Modules */
 .masthead {
+  background-image: url(photos/bread.jpg);
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 30rem;
+  margin-bottom: 3rem; }
+
+.panel-1 {
   background-image: url(photos/honey.jpg);
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  min-height: 50rem;
-  margin-bottom: 8rem; }
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 30rem;
+  margin-bottom: 3rem; }
 
-/* Modules */
+.panel-2 {
+  background-image: url(photos/heart_nuts.jpg);
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 30rem;
+  margin-bottom: 3rem; }
+
+.panel-3 {
+  background-image: url(photos/chocolates.jpg);
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 30rem;
+  margin-bottom: 3rem; }
+
 /* State */
 /* Themes */
 

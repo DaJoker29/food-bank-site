@@ -1,0 +1,15 @@
+footer {
+    @include wrap;
+    text-align: center;
+    font-family: $display-font;
+    padding-bottom: $space * 2; 
+    
+    small {
+        font-size: 0.695rem;
+        line-height: (1.5 / 0.695); 
+    }
+
+    a {
+        font-weight: bold;
+    }
+}

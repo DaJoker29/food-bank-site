@@ -1,31 +1,49 @@
 .site-heading {
-    max-width: 1200px;
-    margin: 0 auto;
     padding-top: $space * 2;
+    @include wrap();
+    @include bp-small {
+        text-align: center;
+    }
 }
 
 .site-title {
     float: left;
-    @include font-size(2.8);
-    font-family: $display-font;
-    @include hover;
+    margin-left: $space; 
+    font-size: 2.618rem;
+    line-height: 2 * (1.5 / 2.618); 
+    margin-top: (1.5 / 2.618);
+    margin-bottom: (1.5 / 2.618);
+    @include text-shadow($color: $light-gray, $blur: 0);
+    a {
+        @include hover;
+    } 
+    @include bp-small {
+        margin: 0 auto;
+        width: 100%;
+        padding-bottom: $space; 
+    }
 }
 
 .site-nav {
     float: right;
+    color: $light-gray;
+    @include text-shadow($blur: 0, $color: $dark-blue);
+    @include bp-small {
+        width: 100%;
+    }
     
     li {
+        font-size: 1.618rem;
+        line-height: (1.5 / 1.618);
+        margin: (1.5 / 1.618) 0;
         display: inline-block;
-        margin-right: $space * 2;
-        @include hover;
+        margin-right: $space;
+        padding-bottom: $space; 
+        a {
+            @include hover;
+        }
+        @include bp-small {
+            width: 45%;
+        }
     }
-}
-
-.masthead {
-    background-image: url(photos/honey.jpg);
-    -webkit-background-size: cover; 
-    -o-background-size: cover; 
-    background-size: cover; 
-    min-height: $space * 50;
-    margin-bottom: $space * 8; 
 }
