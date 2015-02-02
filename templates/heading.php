@@ -5,7 +5,6 @@
             <ul class="nav-list">
                 <li class="nav-item"><a href="#info">Info</a></li>
                 <li class="nav-item"><a href="#staff">Staff</a></li>
-                <li class="nav-item"><a href="#contact">Contact</a></li>
                 <li class="nav-item"><a href="#donate">Donate</a></li>
             </ul>
         </nav>

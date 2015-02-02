@@ -1,10 +1,8 @@
 <!-- Main Content -->
 <main class="content" role="main">
-    <?php include 'page-1.php'; ?>
+    <?php include 'info.php'; ?>
     <div class="panel-1"></div>
-    <?php include 'page-2.php'; ?>
+    <?php include 'staff.php'; ?>
     <div class="panel-2"></div>
-    <?php include 'page-3.php'; ?>
-    <div class="panel-3"></div>
-    <?php include 'page-4.php'; ?>
+    <?php include 'donate.php'; ?>
 </main>

@@ -1,15 +1,11 @@
 .masthead {
-    @include panel(bread);
-}
-
-.panel-1 {
     @include panel(honey);
 }
 
-.panel-2 {
-    @include panel(heart_nuts);
+.panel-1 {
+    @include panel(bread);
 }
 
-.panel-3 {
+.panel-2 {
     @include panel(chocolates);
 }

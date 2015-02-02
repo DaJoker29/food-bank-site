@@ -131,18 +131,6 @@ h3 {
   max-width: 960px;
   margin: 0 auto; }
 
-.section {
-  margin: 0 3rem 3rem;
-  padding: 0 1.5rem;
-  max-width: 960px;
-  margin-right: auto;
-  margin-left: auto; }
-
-.section-heading {
-  font-size: 1.82rem;
-  line-height: 1.64835;
-  margin: 0.82418 0; }
-
 footer {
   max-width: 960px;
   margin-right: auto;
@@ -156,19 +144,17 @@ footer {
   footer a {
     font-weight: bold; }
 
+#staff img {
+  display: block;
+  margin: 7.5rem auto; }
+
+#donate a {
+  position: static;
+  margin: 0 auto;
+  max-width: 100%; }
+
 /* Modules */
 .masthead {
-  background-image: url(photos/bread.jpg);
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  min-height: 30rem;
-  margin-bottom: 3rem; }
-
-.panel-1 {
   background-image: url(photos/honey.jpg);
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -179,8 +165,8 @@ footer {
   min-height: 30rem;
   margin-bottom: 3rem; }
 
-.panel-2 {
-  background-image: url(photos/heart_nuts.jpg);
+.panel-1 {
+  background-image: url(photos/bread.jpg);
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
@@ -190,7 +176,7 @@ footer {
   min-height: 30rem;
   margin-bottom: 3rem; }
 
-.panel-3 {
+.panel-2 {
   background-image: url(photos/chocolates.jpg);
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -200,6 +186,18 @@ footer {
   background-attachment: fixed;
   min-height: 30rem;
   margin-bottom: 3rem; }
+
+.section {
+  margin: 0 3rem 3rem;
+  padding: 0 1.5rem;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.section-heading {
+  font-size: 1.82rem;
+  line-height: 1.64835;
+  margin: 0.82418 0; }
 
 /* State */
 /* Themes */

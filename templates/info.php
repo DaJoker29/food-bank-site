@@ -1,4 +1,4 @@
-<section id="info" class="one section">
+<section id="info" class="section">
     <h2 class="section-heading">Information</h2>
     <p>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quia provident velit voluptate at reiciendis, et enim eius? Quibusdam ut laborum voluptatibus consequuntur debitis nisi possimus ab ratione, fugiat adipisci?</span>
