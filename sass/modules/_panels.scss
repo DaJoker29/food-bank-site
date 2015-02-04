@@ -1,9 +1,9 @@
 .masthead {
-    @include panel(honey);
+    @include panel(bread);
 }
 
 .panel-1 {
-    @include panel(bread);
+    @include panel(honey);
 }
 
 .panel-2 {

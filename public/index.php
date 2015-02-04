@@ -4,4 +4,5 @@
     include 'heading.php';
     include 'content.php';
     include 'footer.php';
+    include 'scripts.php';
 ?>

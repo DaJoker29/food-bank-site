@@ -1,13 +1,26 @@
 module.exports = function(grunt) {
     grunt.initConfig({
         sass: {
-            compile: {
+            dev: {
                 expand: true,
                 cwd: 'sass',
                 src: ['**/*.scss'],
                 dest: 'public',
                 ext: '.css',
-                style: 'expanded'
+                options: {
+                    style: 'expanded',
+                    sourcemap: 'none'
+                }
+            },
+            dist: {
+                expand: true,
+                cwd: 'sass',
+                src: ['**/*.scss'],
+                dest: 'public',
+                ext: '.min.css',
+                options: {
+                    style: 'compressed'
+                }
             }
         },
         watch: {
@@ -37,16 +50,26 @@ module.exports = function(grunt) {
                 src: ['javascript/**/*.js'],
                 dest: 'public/script.js'
             }
+        },
+        uglify: {
+            js: {
+                options: {
+                    sourceMap: true
+                },
+                files: {
+                    'public/script.min.js': ['public/script.js']
+                }
+            }
         }
-
     });
 
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('scripts', ['jshint:before', 'concat', 'jshint:after']);
+    grunt.registerTask('scripts', ['jshint:before', 'concat', 'jshint:after', 'uglify:js']);
     grunt.registerTask('styles', ['sass']);
     grunt.registerTask('default', ['jshint:grunt', 'styles', 'scripts', 'watch']);
 };
