@@ -1,11 +1,9 @@
 .section {
-    margin: 0 ($space * 2) ($space * 2);
-    padding: 0 $space; 
-    @include wrap;
+    @extend %wrap;
+    margin-bottom:  $gutter * 2;
+    padding: 0 $gutter / 2; 
 }
 
 .section-heading {
     font-size: 1.82rem;
-    line-height: 2 * (1.5 / 1.82); 
-    margin: (1.5 / 1.82) 0;
 }

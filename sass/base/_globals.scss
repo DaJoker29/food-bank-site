@@ -6,13 +6,13 @@ html {
 
 body {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 p {
-    margin: $space;
-    font-size: 1.125em;
-    line-height: (1.5 / 1.125);
+    margin: $gutter 0;
+    font-size: 1.125rem;
+    text-indent: $gutter;
 }
 
 h1,

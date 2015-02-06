@@ -1,12 +1,11 @@
 footer {
-    @include wrap;
+    @extend %wrap;
     text-align: center;
     font-family: $display-font;
-    padding-bottom: $space * 2; 
+    padding-bottom: $gutter * 2; 
     
     small {
         font-size: 0.695rem;
-        line-height: (1.5 / 0.695); 
     }
 
     a {

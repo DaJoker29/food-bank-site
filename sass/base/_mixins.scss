@@ -1,82 +1,22 @@
-/* Font Size Rem conversion/Pixel Fallback */
-@mixin font-size($size: 1.6, $line: $size * 1.618) {
-  font-size: ($size * 16) + px;
-  line-height: ($line * 16) + px; 
-  font-size: $size + rem;
-  line-height: $line + rem;
-}
-
-/* Breakpoints */
-@mixin bp-large {
-  @media only screen and (max-width: 60em) {
-    @content;
-  }
-}
-
-@mixin bp-medium {
-  @media only screen and (max-width: 40em) {
-    @content;
-  }
-}
-
+// Breakpoints
 @mixin bp-small {
   @media only screen and (max-width: $small) {
     @content;
   }
 }
 
-/* Transitions */
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-
-/* Opacity */
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
-}
-
-/* Hover Change */
-
-@mixin hover() {
-    &:hover {
-      color: $light-blue;
-      border-bottom: solid 1px $light-blue;
-      
-      @include bp-small {
-        border: none;
-      }
-    }
-}
-
-/* Text Shadow */
-
-@mixin text-shadow($h: $space / 10, $v: $space / 10, $blur: $space / 10, $color: $light-blue) {
+// Text Shadow 
+@mixin text-shadow($h: $gutter / 20, $v: $gutter / 20, $blur: $gutter / 20, $color: $light-blue) {
   text-shadow: $h $v $blur $color 
 }
 
-/* Wrap */
-@mixin wrap() {
-  max-width: $max;
-  margin-right: auto;
-  margin-left: auto; 
-}
-
-
-/* Panel */
+// Panel
 @mixin panel($img) {
     background-image: url(photos/#{$img}.jpg);
-    -webkit-background-size: cover; 
-    -o-background-size: cover; 
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;  
-    min-height: $space * 20;
-    margin-bottom: $space * 2;
+    min-height: $gutter * 15;
+    margin-bottom: $gutter;
 }

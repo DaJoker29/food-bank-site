@@ -1,3 +1,5 @@
+var autoprefixer = require('autoprefixer-core');
+
 module.exports = function(grunt) {
     grunt.initConfig({
         sass: {
@@ -29,7 +31,7 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'sass/**/*.scss',
-                tasks: ['sass']
+                tasks: ['styles']
             },
             js: {
                 files: 'javascript/**/*.js',
@@ -60,6 +62,16 @@ module.exports = function(grunt) {
                     'public/script.min.js': ['public/script.js']
                 }
             }
+        },
+        postcss: {
+            options: {
+                processors: [
+                    autoprefixer({ browsers: ['last 2 version'] }).postcss
+                ]
+            },
+            dist: {
+                src: 'public/*.css'
+            }
         }
     });
 
@@ -68,8 +80,9 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-postcss');
 
     grunt.registerTask('scripts', ['jshint:before', 'concat', 'jshint:after', 'uglify:js']);
-    grunt.registerTask('styles', ['sass']);
+    grunt.registerTask('styles', ['sass', 'postcss']);
     grunt.registerTask('default', ['jshint:grunt', 'styles', 'scripts', 'watch']);
 };
