@@ -1,0 +1,44 @@
+.site-heading {
+    @extend %wrap;
+    padding-top: $gutter * 2;
+    font-size: 2.2rem;
+    @include bp-small {
+        text-align: center;
+    }
+}
+
+.site-title {
+    float: left;
+    margin-left: $gutter; 
+    @include text-shadow($color: $light-gray, $blur: 0);
+    @include bp-small {
+        margin: 0 auto;
+        width: 100%;
+        padding-bottom: $gutter; 
+    }
+    a {
+        @extend %hover;
+    } 
+}
+
+.site-nav {
+    float: right;
+    color: $light-gray;
+    @include text-shadow($blur: 0, $color: $dark-blue);
+    @include bp-small {
+        width: 100%;
+    }
+    
+    li {
+        display: inline-block;
+        margin-right: $gutter;
+        padding-bottom: $gutter; 
+        @include bp-small {
+            width: 45%;
+        }
+        
+        a {
+            @extend %hover;
+        }
+    }
+}

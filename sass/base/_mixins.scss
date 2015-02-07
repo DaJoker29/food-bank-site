@@ -1,0 +1,22 @@
+// Breakpoints
+@mixin bp-small {
+  @media only screen and (max-width: $small) {
+    @content;
+  }
+}
+
+// Text Shadow 
+@mixin text-shadow($h: $gutter / 20, $v: $gutter / 20, $blur: $gutter / 20, $color: $light-blue) {
+  text-shadow: $h $v $blur $color 
+}
+
+// Panel
+@mixin panel($img) {
+    background-image: url(#{$img}.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    min-height: $gutter * 15;
+    margin-bottom: $gutter;
+}

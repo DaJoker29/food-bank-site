@@ -1,0 +1,18 @@
+// Wrap
+%wrap {
+  max-width: $max;
+  margin-right: auto;
+  margin-left: auto; 
+}
+
+// Hover Change
+%hover {
+    &:hover {
+      color: $light-blue;
+      border-bottom: solid 1px $light-blue;
+      
+      @include bp-small {
+        border: none;
+      }
+    }
+}

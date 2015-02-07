@@ -1,0 +1,14 @@
+footer {
+    @extend %wrap;
+    text-align: center;
+    font-family: $display-font;
+    padding-bottom: $gutter * 2; 
+    
+    small {
+        font-size: 0.695rem;
+    }
+
+    a {
+        font-weight: bold;
+    }
+}

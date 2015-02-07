@@ -1,0 +1,15 @@
+.section {
+    @extend %wrap;
+    margin-bottom:  $gutter * 2;
+    padding: 0 $gutter / 2; 
+}
+
+.section-heading {
+    font-size: 1.82rem;
+    
+    .top {
+        @extend %hover;
+        font-size: 1rem;
+        color: $light-blue;
+    }
+}

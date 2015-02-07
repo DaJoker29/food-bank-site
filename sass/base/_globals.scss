@@ -1,0 +1,23 @@
+html {
+    font-family: $base-font;
+    background-color: $light-gray;
+    color: $dark-blue;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+p {
+    margin: $gutter 0;
+    font-size: 1.125rem;
+    text-indent: $gutter;
+}
+
+h1,
+h2,
+h3 {
+    font-family: $display-font; 
+    font-weight: bold;
+}
