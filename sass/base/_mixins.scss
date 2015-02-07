@@ -12,7 +12,7 @@
 
 // Panel
 @mixin panel($img) {
-    background-image: url(pics/#{$img}.jpg);
+    background-image: url(#{$img}.jpg);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

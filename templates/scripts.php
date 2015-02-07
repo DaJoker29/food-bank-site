@@ -1,5 +1,5 @@
 <!-- Scripts -->
-<script src="script.min.js"></script>
+<script src="script.js"></script>
 <script>
     smoothScroll.init({
         speed: 850,

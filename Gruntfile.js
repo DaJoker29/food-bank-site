@@ -1,5 +1,3 @@
-var autoprefixer = require('autoprefixer-core');
-
 module.exports = function(grunt) {
     grunt.initConfig({
         sass: {
@@ -11,15 +9,14 @@ module.exports = function(grunt) {
                 ext: '.css',
                 options: {
                     style: 'expanded',
-                    sourcemap: 'none'
                 }
             },
-            dist: {
+            prod: {
                 expand: true,
                 cwd: 'sass',
                 src: ['**/*.scss'],
                 dest: 'public',
-                ext: '.min.css',
+                ext: '.css',
                 options: {
                     style: 'compressed'
                 }
@@ -31,46 +28,65 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'sass/**/*.scss',
-                tasks: ['styles']
+                tasks: ['sass:dev', 'autoprefixer']
             },
             js: {
                 files: 'javascript/**/*.js',
-                tasks: ['scripts']
+                tasks: ['jshint', 'uglify:dev']
             },
             php: {
-                files: ['public/*.php', 'templates/*.php']
+                files: ['templates/**/*.php']
             }
 
         },
         jshint: {
-            grunt: ['Gruntfile.js'],
-            before: ['javascript/**/*.js'],
-            after: ['public/script.js']
-        },
-        concat: {
-            js: {
-                src: ['javascript/**/*.js'],
-                dest: 'public/script.js'
-            }
+            all: ['javascript/**/*.js']
         },
         uglify: {
-            js: {
+            dev: {
+                options: {
+                    sourceMap: true,
+                    mangle: false,
+                    beautify: true,
+                    preserveComments: 'all',
+                    compress: false
+                },
+                files: {
+                    'public/script.js': ['javascript/**/*.js']
+                }
+            },
+            prod: {
                 options: {
                     sourceMap: true
                 },
                 files: {
-                    'public/script.min.js': ['public/script.js']
+                    'public/script.js': ['javascript/**/*.js']
                 }
             }
         },
-        postcss: {
-            options: {
-                processors: [
-                    autoprefixer({ browsers: ['last 2 version'] }).postcss
-                ]
+        clean: {
+            all: ["public/"]
+        },
+        copy: {
+            pics: {
+                cwd: 'pics',
+                src: '*.jpg',
+                dest: 'public',
+                expand: true
             },
-            dist: {
-                src: 'public/*.css'
+            php: {
+                cwd: 'templates',
+                src: 'index.php',
+                dest: 'public',
+                expand: true
+            }
+        },
+        autoprefixer: {
+            options: {
+                map: true
+            },
+            all: {
+                src: 'public/style.css'
             }
         }
     });
@@ -78,11 +94,46 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-postcss');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-autoprefixer');
 
-    grunt.registerTask('scripts', ['jshint:before', 'concat', 'jshint:after', 'uglify:js']);
-    grunt.registerTask('styles', ['sass', 'postcss']);
-    grunt.registerTask('default', ['jshint:grunt', 'styles', 'scripts', 'watch']);
+
+    grunt.registerTask('static', 'Build HTML from PHP templates', function() {
+        var contents = "";
+        var dir = 'templates/';
+        var dest = 'public/index.html';
+        var srcs = [
+            'head.php',
+            'heading.php',
+            '<!-- Main Content -->\n<main class="content" role="main">',
+            'info.php',
+            '<div class="panel-1"></div>',
+            'staff.php',
+            '<div class="panel-2"></div>',
+            'donate.php',
+            '</main>',
+            'footer.php',
+            'scripts.php'
+        ];
+
+        // Build Buffer Content
+        for (var i in srcs) {
+            var path = dir + srcs[i];
+            if(grunt.file.isFile(path)) {
+                contents += grunt.file.read(path);
+            }
+            else {
+                contents += srcs[i];
+            }
+            contents += "\n";
+        }
+
+        // Save Buffer to file
+        grunt.file.write(dest, contents);
+    });
+    grunt.registerTask('dev', ['clean', 'copy', 'jshint', 'uglify:dev', 'sass:dev' , 'autoprefixer']);
+    grunt.registerTask('prod', [ 'clean', 'copy:pics', 'static', 'jshint', 'uglify:prod', 'sass:prod', 'autoprefixer']);
+    grunt.registerTask('default', ['dev', 'watch']);
 };
