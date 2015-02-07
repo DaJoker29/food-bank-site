@@ -1,6 +1,7 @@
 .site-heading {
     @extend %wrap;
     padding-top: $gutter * 2;
+    font-size: 2.2rem;
     @include bp-small {
         text-align: center;
     }
@@ -9,18 +10,15 @@
 .site-title {
     float: left;
     margin-left: $gutter; 
-    font-size: 2.618rem;
     @include text-shadow($color: $light-gray, $blur: 0);
-    
-    a {
-        @extend %hover;
-    } 
-
     @include bp-small {
         margin: 0 auto;
         width: 100%;
         padding-bottom: $gutter; 
     }
+    a {
+        @extend %hover;
+    } 
 }
 
 .site-nav {
@@ -32,17 +30,15 @@
     }
     
     li {
-        font-size: 1.618rem;
         display: inline-block;
         margin-right: $gutter;
         padding-bottom: $gutter; 
+        @include bp-small {
+            width: 45%;
+        }
         
         a {
             @extend %hover;
-        }
-        
-        @include bp-small {
-            width: 45%;
         }
     }
 }
