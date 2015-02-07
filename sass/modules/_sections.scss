@@ -6,4 +6,10 @@
 
 .section-heading {
     font-size: 1.82rem;
+    
+    .top {
+        @extend %hover;
+        font-size: 1rem;
+        color: $light-blue;
+    }
 }
