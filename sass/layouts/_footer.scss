@@ -5,10 +5,6 @@ footer {
     padding-bottom: $gutter * 2; 
     
     small {
-        font-size: 0.695rem;
-    }
-
-    a {
-        font-weight: bold;
+        font-size: $small-font-size;
     }
 }

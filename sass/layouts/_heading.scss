@@ -1,44 +1,43 @@
 .site-heading {
     @extend %wrap;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
     padding-top: $gutter * 2;
-    font-size: 2.2rem;
+    font-size: $large-font-size;
+    width: 100%;
     @include bp-small {
         text-align: center;
+        display: inline-block;
     }
 }
 
 .site-title {
-    float: left;
-    margin-left: $gutter; 
+
     @include text-shadow($color: $light-gray, $blur: 0);
     @include bp-small {
         margin: 0 auto;
         width: 100%;
         padding-bottom: $gutter; 
     }
-    a {
-        @extend %hover;
-    } 
 }
 
 .site-nav {
-    float: right;
     color: $light-gray;
+    font-size: $medium-font-size;
+    font-weight: bold; 
     @include text-shadow($blur: 0, $color: $dark-blue);
     @include bp-small {
         width: 100%;
     }
     
     li {
-        display: inline-block;
-        margin-right: $gutter;
-        padding-bottom: $gutter; 
+        display: inline-block; 
+        margin-left: $gutter;
         @include bp-small {
-            width: 45%;
-        }
-        
-        a {
-            @extend %hover;
+            width: 100%;
+            margin-left: 0;
+            padding-bottom: $gutter; 
         }
     }
 }

@@ -9,9 +9,20 @@ $black:         #222222;
 $small:         920px;
 
 // Typography
-$display-font:  'Comfortaa', cursive;
-$base-font:     'Bitter', serif;
-$gutter:         40px;
+$small-font-size:   0.75rem;
+$base-font-size:    16px;
+$body-font-size:    1.125rem;
+$medium-font-size:  1.82rem;
+$large-font-size:   2.2rem;
+$line-height:       1.4;
+
+$gutter:            40px;
+
+$display-font:      'Comfortaa', cursive;
+$base-font:         'Bitter', serif;
 
 // Max Width (Containers)
 $max:           960px;
+
+// Transitions
+$transition-speed:  .3s;

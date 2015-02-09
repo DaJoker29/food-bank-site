@@ -18,7 +18,8 @@ module.exports = function(grunt) {
                 dest: 'public',
                 ext: '.css',
                 options: {
-                    style: 'compressed'
+                    style: 'compressed',
+                    sourcemap: 'none'
                 }
             }
         },
@@ -56,9 +57,6 @@ module.exports = function(grunt) {
                 }
             },
             prod: {
-                options: {
-                    sourceMap: true
-                },
                 files: {
                     'public/script.js': ['javascript/**/*.js']
                 }
