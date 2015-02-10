@@ -12,11 +12,6 @@
 
 // Panel
 @mixin panel($img) {
+    @extend %panel;
     background-image: url(#{$img}.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;  
-    min-height: $gutter * 15;
-    margin-bottom: $gutter;
 }
