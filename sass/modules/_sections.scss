@@ -1,14 +1,18 @@
 .section {
     @extend %wrap;
     margin-bottom:  $gutter * 2;
-    padding: 0 $gutter / 2; 
+    padding: 0 $gutter / 2;
+    &:hover .top {
+        opacity: 1;
+    }
 }
 
 .section-heading {
     font-size: $medium-font-size;
-    
     .top {
         font-size: $body-font-size;
         color: $light-blue;
+        opacity: 0;
     }
+
 }
