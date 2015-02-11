@@ -1,27 +1,31 @@
 html {
-    font-family: $base-font;
-    background-color: $light-gray;
-    color: $dark-blue;
+    font-family: $font-base;
+    background-color: $gray-light;
+    color: $blue-dark;
 }
 
 body {
-    font-size: $base-font-size;
+    font-size: $font-size;
     line-height: $line-height;
 }
 
 p {
     margin: $gutter 0;
-    font-size: $body-font-size;
+    font-size: $font-size-body;
     text-indent: $gutter;
 }
 
 h1,
 h2,
 h3 {
-    font-family: $display-font; 
+    font-family: $font-display; 
     font-weight: bold;
 }
 
 a {
     @extend %hover;
+}
+
+small {
+    font-size: $font-size-small;
 }
