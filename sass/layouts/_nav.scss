@@ -1,0 +1,23 @@
+.site-nav {
+    display: none;
+    color: $gray-light;
+    font-size: $font-size-medium;
+    font-weight: bold; 
+    width: 100%;
+    @include text-shadow($blur: 0, $color: $blue-dark);
+    @include bp-tiny{
+        display: block;
+    }
+    
+    li {
+        display: inline-block; 
+        margin: 0 $gutter/2;
+    }
+}
+
+.nav-select {
+    width: 75%;
+    @include bp-tiny {
+        display: none;
+    }
+}

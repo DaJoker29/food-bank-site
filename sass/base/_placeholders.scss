@@ -10,10 +10,6 @@
     &:hover {
       color: $blue-light;
       border-bottom: solid 1px $blue-light;
-      
-      @include bp-small {
-        border: none;
-      }
     }
 }
 
