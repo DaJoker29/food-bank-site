@@ -5,15 +5,15 @@
 @import "base/globals";
 @import "base/placeholders";
 
+// Modules
+@import "modules/panels";
+@import "modules/sections";
+
 // Layouts
 @import "layouts/heading";
 @import "layouts/footer";
 @import "layouts/staff";
 @import "layouts/donate";
-
-// Modules
-@import "modules/panels";
-@import "modules/sections";
 
 // State
 
