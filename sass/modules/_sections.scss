@@ -2,17 +2,22 @@
     @extend %wrap;
     margin-bottom:  $gutter * 2;
     padding: 0 $gutter / 2;
-    &:hover .top {
-        opacity: 1;
+    @include bp-small {
+        &:hover .top {
+            opacity: 1;
+        }
     }
 }
 
 .section-heading {
     font-size: $font-size-medium;
-    .top {
-        font-size: $font-size-body;
-        color: $blue-light;
-        opacity: 0;
-    }
+}
 
+.top {
+    font-size: $font-size-body;
+    color: $blue-light;
+    margin-left: $gutter; 
+    @include bp-small {
+        opacity: 0; 
+    }
 }
