@@ -97,41 +97,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-autoprefixer');
 
-
-    grunt.registerTask('static', 'Build HTML from PHP templates', function() {
-        var contents = "";
-        var dir = 'templates/';
-        var dest = 'public/index.html';
-        var srcs = [
-            'head.php',
-            'heading.php',
-            '<!-- Main Content -->\n<main class="content" role="main">',
-            'info.php',
-            '<div class="panel-1"></div>',
-            'staff.php',
-            '<div class="panel-2"></div>',
-            'donate.php',
-            '</main>',
-            'footer.php',
-            'scripts.php'
-        ];
-
-        // Build Buffer Content
-        for (var i in srcs) {
-            var path = dir + srcs[i];
-            if(grunt.file.isFile(path)) {
-                contents += grunt.file.read(path);
-            }
-            else {
-                contents += srcs[i];
-            }
-            contents += "\n";
-        }
-
-        // Save Buffer to file
-        grunt.file.write(dest, contents);
-    });
     grunt.registerTask('dev', ['clean', 'copy', 'jshint', 'uglify:dev', 'sass:dev' , 'autoprefixer']);
-    grunt.registerTask('prod', [ 'clean', 'copy:pics', 'static', 'jshint', 'uglify:prod', 'sass:prod', 'autoprefixer']);
+    grunt.registerTask('prod', [ 'clean', 'copy', 'jshint', 'uglify:prod', 'sass:prod', 'autoprefixer']);
     grunt.registerTask('default', ['dev', 'watch']);
 };
