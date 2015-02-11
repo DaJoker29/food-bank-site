@@ -8,11 +8,17 @@
 // Hover Change
 %hover {
     &:hover {
-      color: $light-blue;
-      border-bottom: solid 1px $light-blue;
-      
-      @include bp-small {
-        border: none;
-      }
+      color: $blue-light;
+      border-bottom: solid 1px $blue-light;
     }
+}
+
+// Panels
+%panel {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    min-height: $gutter * 15;
+    margin-bottom: $gutter;
 }

@@ -1,5 +1,6 @@
 <section id="info" class="section">
-    <h2 class="section-heading">Information <a data-scroll href="#" class="top">Back To Top</a></h2>
+    <h2 class="section-heading">Information</h2>
+    <a data-scroll href="#" class="top">Back To Top</a>
     <p>
         <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum quia provident velit voluptate at reiciendis, et enim eius? Quibusdam ut laborum voluptatibus consequuntur debitis nisi possimus ab ratione, fugiat adipisci?</span>
         <span>Quasi, tempore expedita voluptatum, sed in delectus adipisci sunt recusandae atque obcaecati laborum accusamus ut assumenda natus illo omnis ipsam, placeat amet soluta modi non, quia facere perspiciatis. Commodi, ut.</span>
