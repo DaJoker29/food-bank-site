@@ -8,8 +8,8 @@
 // Hover Change
 %hover {
     &:hover {
-      color: $light-blue;
-      border-bottom: solid 1px $light-blue;
+      color: $blue-light;
+      border-bottom: solid 1px $blue-light;
       
       @include bp-small {
         border: none;

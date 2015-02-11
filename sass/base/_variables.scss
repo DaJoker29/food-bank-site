@@ -1,28 +1,33 @@
 // Colors
-$dark-blue:     #37474F;
-$light-blue:    #92C5DF;
-$light-gray:    #eeeeee;
-$dark-gray:     #333333;
-$black:         #222222;
+$blue-light:        #92C5DF;
+$blue-dark:         #37474F;
+
+$gray-light:        #eeeeee;
+$gray-dark:         #333333;
+
+$black:             #222222;
 
 // Breakpoints
-$small:         920px;
+$small:             920px;
 
 // Typography
-$small-font-size:   0.75rem;
-$base-font-size:    16px;
-$body-font-size:    1.125rem;
-$medium-font-size:  1.82rem;
-$large-font-size:   2.2rem;
-$line-height:       1.4;
+$font-size:         16px; // Base
 
+$font-size-small:   0.75rem;
+$font-size-body:    1.125rem;
+$font-size-medium:  1.82rem;
+$font-size-large:   2.2rem;
+
+// Spacing
+$line-height:       1.4;
 $gutter:            40px;
 
-$display-font:      'Comfortaa', cursive;
-$base-font:         'Bitter', serif;
+// Fonts
+$font-display:      'Comfortaa', cursive;
+$font-base:         'Bitter', serif;
 
 // Max Width (Containers)
-$max:           960px;
+$max:               960px;
 
 // Transitions
-$transition-speed:  .3s;
+$transition-speed:  .4s;

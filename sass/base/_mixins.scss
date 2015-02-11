@@ -6,7 +6,7 @@
 }
 
 // Text Shadow 
-@mixin text-shadow($h: $gutter / 20, $v: $gutter / 20, $blur: $gutter / 20, $color: $light-blue) {
+@mixin text-shadow($h: $gutter / 20, $v: $gutter / 20, $blur: $gutter / 20, $color: $blue-light) {
   text-shadow: $h $v $blur $color 
 }
 
