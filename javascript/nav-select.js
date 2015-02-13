@@ -1,24 +1,5 @@
 /*
     Navigation Select Menu
-    version: 1
-*/
-
-// Watch for opt Change
-// var nav = document.querySelector('#nav-select');
-// nav.addEventListener('change', function (e) {
-//     // Check for empty value
-//     if(e.target.value === "")
-//         return;
-//     var selection = e.target.value;
-    
-//     // Initiate Scroll to Section
-//     var element = document.querySelector(selection);
-//     element.scrollIntoView();
-// });
-
-
-/*
-    Navigation Select Menu
     version: 2
     @function buildNav()
 */
@@ -83,6 +64,3 @@ function buildNav() {
     });
 
 }
-
-// Construct Navigation Select Menu
-buildNav();
