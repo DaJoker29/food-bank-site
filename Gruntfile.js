@@ -80,10 +80,11 @@ module.exports = function(grunt) {
             }
         },
         autoprefixer: {
-            options: {
+            dev: {
+                src: 'public/style.css',
                 map: true
             },
-            all: {
+            prod: {
                 src: 'public/style.css'
             }
         }
@@ -97,7 +98,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-autoprefixer');
 
-    grunt.registerTask('dev', ['clean', 'copy', 'jshint', 'uglify:dev', 'sass:dev' , 'autoprefixer']);
-    grunt.registerTask('prod', [ 'clean', 'copy', 'jshint', 'uglify:prod', 'sass:prod', 'autoprefixer']);
+    grunt.registerTask('dev', ['clean', 'copy', 'jshint', 'uglify:dev', 'sass:dev' , 'autoprefixer:dev']);
+    grunt.registerTask('prod', [ 'clean', 'copy', 'jshint', 'uglify:prod', 'sass:prod', 'autoprefixer:prod']);
     grunt.registerTask('default', ['dev', 'watch']);
 };
