@@ -29,3 +29,23 @@ a {
 small {
     font-size: $font-size-small;
 }
+
+input,
+textarea,
+keygen,
+select,
+button {
+    width: 80%;
+    border-color: $gray-light;
+    color: $gray-light;
+    background-color: $blue-dark;
+    font-family: $font-display; 
+    font-size: $font-size-body; 
+    outline: 0;
+    padding: ( $gutter / 4 ); 
+}
+
+::selection {
+    color: $gray-light;
+    background-color: $blue-dark; 
+}

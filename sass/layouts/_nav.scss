@@ -16,7 +16,6 @@
 }
 
 .nav-select {
-    width: 75%;
     @include bp-tiny {
         display: none;
     }
