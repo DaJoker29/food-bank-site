@@ -35,14 +35,21 @@ textarea,
 keygen,
 select,
 button {
-    width: 80%;
-    border-color: $gray-light;
+    border-color: $black;
+    border-width: 1px; 
+    border-style: solid;
     color: $gray-light;
     background-color: $blue-dark;
     font-family: $font-display; 
     font-size: $font-size-body; 
     outline: 0;
     padding: ( $gutter / 4 ); 
+}
+
+button,
+input[type=button] {
+    background-color: $gray-dark;
+    cursor: pointer;
 }
 
 ::selection {
