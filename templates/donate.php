@@ -10,8 +10,8 @@
         </div>
 
         <div class="btn-group">
-            <input type="button" value="Donate via PayPal">
-            <input type="button" value="Donate via Square">
+            <a href="#" class="btn">Donate via PayPal</a>
+            <a href="#" class="btn">Donate via Square</a>
         </div>
     </form>
 </section>
