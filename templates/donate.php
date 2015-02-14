@@ -10,8 +10,8 @@
         </div>
 
         <div class="btn-group">
-            <a href="#" class="btn">Donate via PayPal</a>
-            <a href="#" class="btn">Donate via Square</a>
+            <a href="//www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=AYVA292HL7LL6" class="btn">Donate via PayPal</a>
+            <a href="//squareup.com/market/zerodae" class="btn">Donate via Square</a>
         </div>
     </form>
 </section>
