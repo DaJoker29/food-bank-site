@@ -10,18 +10,30 @@
     margin: $gutter / 4 0;
 }
 
+/* 
+    .info-group only shows in JS-enabled browsers
+ */
+
 .info-group {
-    flex: 100%;
-    display: flex;
-    flex-flow: row wrap;
     input {
         flex: 1 $gutter * 8;
         margin: 2px;
     }    
+    display: none;
+    flex: 100%;
+    flex-flow: row wrap;
+}
+
+.js .info-group {
+    display: flex;
 }
 
 .btn-group {
     a {
+        &:hover {
+            background-color: $gray-dark;
+            color: $blue-light;
+        }
         flex: 1 $gutter * 5;
         transition: $transition-speed;
         text-align: center;
@@ -30,11 +42,6 @@
         font-size: $font-size-body;
         border: 1px solid $gray-dark; 
         background-color: $blue-light; 
-        
-        &:hover {
-            background-color: $gray-dark;
-            color: $blue-light;
-        }
     }
     flex: 100%;
     display: flex;
