@@ -12,9 +12,18 @@
     }
 }
 
-.site-title {
-    @include text-shadow($color: $gray-light, $blur: 0);
-    margin: 0 auto;
-    width: 100%;
-    padding-bottom: $gutter / 2; 
+.site-title__def {
+    @extend %site-title;
+    @include bp-tiny {
+        display: none;
+    }
+    letter-spacing: $gutter / 8;    
+}
+
+.site-title__small {
+    @extend %site-title;
+    @include bp-tiny {
+        display: block;
+    }
+    display: none;
 }

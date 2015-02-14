@@ -1,7 +1,8 @@
 <!-- Heading -->
 <div class="masthead">
     <header class="site-heading">
-        <h1 class="site-title"><a href="#">Interfaith Food Bank</a></h1>
+        <h1 class="site-title__small">Interfaith Food Bank</h1>
+        <h1 class="site-title__def">IFB</h1>
         <nav class="site-nav">
             <ul class="nav-list">
                 <li class="nav-item"><a data-scroll href="#info">Info</a></li>

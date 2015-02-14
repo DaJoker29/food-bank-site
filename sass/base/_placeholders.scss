@@ -22,3 +22,11 @@
     min-height: $gutter * 15;
     margin-bottom: $gutter;
 }
+
+// Page Title
+%site-title {
+    @include text-shadow($color: $gray-light, $blur: 0);
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: $gutter / 2; 
+}
