@@ -17,7 +17,7 @@
     @include bp-tiny {
         display: none;
     }
-    letter-spacing: $gutter / 8;    
+    letter-spacing: $letter-display;    
 }
 
 .site-title__small {
@@ -26,4 +26,5 @@
         display: block;
     }
     display: none;
+    letter-spacing: $letter-display; 
 }

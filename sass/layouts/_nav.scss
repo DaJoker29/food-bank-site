@@ -1,6 +1,7 @@
 .site-nav {
     color: $gray-light;
     font-size: $font-size-medium;
+    letter-spacing: $letter-base; 
     font-weight: bold; 
     width: 100%;
     @include text-shadow($blur: 0, $color: $blue-dark);
