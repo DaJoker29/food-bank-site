@@ -29,7 +29,7 @@ module.exports = function(grunt) {
             },
             sass: {
                 files: 'sass/**/*.scss',
-                tasks: ['sass:dev', 'autoprefixer']
+                tasks: ['sass:dev', 'autoprefixer:dev']
             },
             js: {
                 files: 'javascript/**/*.js',
