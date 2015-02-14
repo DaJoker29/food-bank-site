@@ -1,0 +1,15 @@
+button,
+input[type=button],
+.btn {
+    &:hover {
+        @extend %btn-alt;        
+    }
+    cursor: pointer;
+    transition: $transition-speed;
+    text-align: center;
+    padding: $gutter / 4;
+    font-size: $font-size-body;
+    border: 1px solid $gray-dark; 
+    background-color: $blue-light;
+    color: $blue-dark; 
+}

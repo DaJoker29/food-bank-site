@@ -3,6 +3,7 @@
 */
 if(document.querySelector && window.addEventListener) {
     buildNav();
+    initDonate();
     smoothScroll.init({
         speed: 850,
         easing: 'linear',

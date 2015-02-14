@@ -22,3 +22,9 @@
     min-height: $gutter * 15;
     margin-bottom: $gutter;
 }
+
+// Button (alternate)
+%btn-alt {
+    background-color: $gray-dark;
+    color: $blue-light;
+}
