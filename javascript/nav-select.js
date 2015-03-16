@@ -3,7 +3,7 @@
     version: 2
     @function buildNav()
 */
-function buildNav() {
+(function (){
 
     /*
         Create Menu Element
@@ -63,4 +63,4 @@ function buildNav() {
         e.target.selectedIndex = 0;
     });
 
-}
+})();
