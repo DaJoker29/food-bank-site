@@ -1,21 +1,20 @@
-IFB
-==============
-
-Free and open website design for a local food bank. Portfolio work and charitable donation to a great organization.
+# {{ His RAFT }}
 
 Build Instructions
 -------------------
 
-First, use NPM to install dependencies
+First, use [Node/NPM](https://nodejs.org/) to install dependencies
 
-`npm install`
+```
+npm install
+```
 
-Next, use Grunt to build public folder
+Next, use [Grunt](http://gruntjs.com/) to build project
 
-`grunt prod` for production
+```
+grunt build
+```
 
--- OR --
+> Production is compressed and uglified. Development is uncompressed with sourcemaps.
 
-`grunt dev` for development
-
-Default `grunt` command will build development version and launch `grunt watch` to jump straight into coding
+> *Default `grunt` command will build current project and launch `grunt watch` to jump straight into coding*

@@ -1,0 +1,80 @@
+// Custom Elements
+.img-carousel {
+  background-color: rgb(55, 58, 60);
+  border: 1px solid rgba(0,0,0, .125);
+  box-shadow: inset 0 1rem 1rem -1rem $black, inset 0 -1rem 1rem -1rem $black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  .item {
+    margin: 1rem;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: .25rem;
+      border: 1px solid rgba(0,0,0,.125);
+    }
+  }
+}
+
+.landing {
+  background-color: $white;
+}
+
+// Bootstrap Overrides
+.card {
+  border: 0;
+  transition: .3s ease-in-out;
+  img {
+    filter: sepia(60%);
+    transition: .3s ease-in-out;
+  }
+  &:hover {
+    box-shadow: 0 0 .125rem $black;
+    img {
+      filter: sepia(0);
+    }
+  }
+}
+
+.navbar-dark .navbar-brand {
+  color: $white;
+}
+
+.modal .bg-warning,
+.modal .bg-info {
+  color: rgb(55, 58, 60) !important;
+}
+
+.modal-open {
+  padding-right: 0 !important;
+}
+
+// Preloader
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background: url('preloader.gif') no-repeat center;
+    margin: -100px 0 0 -100px;
+}
+
+// ScrollPos Styler
+.sps {
+  transition: .3s all;
+}
+
+.sps--blw {
+  box-shadow: 0 0 .125rem $black;
+}
