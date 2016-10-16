@@ -1,47 +1,57 @@
 module.exports = function(grunt) {
+    require('load-grunt-tasks')(grunt);
+
     grunt.initConfig({
+        watch: {
+            sass: {
+                files: ['src/scss/**/*.scss'],
+                tasks: ['sass', 'postcss']
+            },
+            js: {
+                files: ['src/js/**/*.js'],
+                tasks: ['eslint', 'uglify']
+            },
+            livereload: {
+                options: { livereload: true },
+                files: ['dist/**/*']
+            }
+        },
         sass: {
             dev: {
                 expand: true,
-                cwd: 'sass',
+                cwd: 'src/scss',
                 src: ['**/*.scss'],
-                dest: 'public',
+                dest: 'dist',
                 ext: '.css',
                 options: {
                     style: 'expanded',
+                    sourcemap: 'none'
                 }
             },
             prod: {
-                expand: true,
-                cwd: 'sass',
+               expand: true,
+                cwd: 'src/scss',
                 src: ['**/*.scss'],
-                dest: 'public',
-                ext: '.css',
+                dest: 'dist',
+                ext: '.min.css',
                 options: {
-                    style: 'compressed',
-                    sourcemap: 'none'
+                    style: 'compressed'
                 }
             }
         },
-        watch: {
+        postcss: {
             options: {
-                livereload: true,
+                processors: [
+                    require('autoprefixer-core')({browsers: 'last 2 versions'})
+                ]
             },
-            sass: {
-                files: 'sass/**/*.scss',
-                tasks: ['sass:dev', 'autoprefixer:dev']
+            dev: {
+                src: 'dist/style.css',
+                map: true
             },
-            js: {
-                files: 'javascript/**/*.js',
-                tasks: ['jshint', 'uglify:dev']
-            },
-            php: {
-                files: ['templates/**/*.php']
+            prod: {
+                src: 'dist/style.min.css'
             }
-
-        },
-        jshint: {
-            all: ['javascript/**/*.js']
         },
         uglify: {
             dev: {
@@ -53,52 +63,20 @@ module.exports = function(grunt) {
                     compress: false
                 },
                 files: {
-                    'public/script.js': ['javascript/**/*.js']
+                    'dist/script.js': ['src/js/**/*.js']
                 }
             },
             prod: {
                 files: {
-                    'public/script.js': ['javascript/**/*.js']
+                    'dist/script.min.js': ['src/js/**/*.js']
                 }
             }
         },
-        clean: {
-            all: ["public/"]
-        },
-        copy: {
-            pics: {
-                cwd: 'pics',
-                src: '*.jpg',
-                dest: 'public',
-                expand: true
-            },
-            php: {
-                cwd: 'templates',
-                src: 'index.php',
-                dest: 'public',
-                expand: true
-            }
-        },
-        autoprefixer: {
-            dev: {
-                src: 'public/style.css',
-                map: true
-            },
-            prod: {
-                src: 'public/style.css'
-            }
+        eslint: {
+            target: ['src/js/**/*.js']
         }
     });
 
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-
-    grunt.registerTask('dev', ['clean', 'copy', 'jshint', 'uglify:dev', 'sass:dev' , 'autoprefixer:dev']);
-    grunt.registerTask('prod', [ 'clean', 'copy', 'jshint', 'uglify:prod', 'sass:prod', 'autoprefixer:prod']);
-    grunt.registerTask('default', ['dev', 'watch']);
+    grunt.registerTask('build', 'Build project', ['eslint', 'uglify', 'sass', 'postcss'])
+    grunt.registerTask('default', 'Build development version and run watch server', ['build', 'watch']);
 };

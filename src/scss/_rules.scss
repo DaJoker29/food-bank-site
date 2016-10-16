@@ -1,0 +1,10 @@
+body {
+  background-color: $black;
+  color: $white;
+}
+
+.half {
+  min-height: 50vh;
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
