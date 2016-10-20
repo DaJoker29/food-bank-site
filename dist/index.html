@@ -13,10 +13,11 @@
 </head>
 <!-- Start of Content -->
 <body class="landing">
-
+  <!-- Fixed Navbar -->
   <nav class="navbar navbar-fixed-bottom navbar-dark bg-inverse">
     <h1 class="navbar-brand">HIS RAFT INC. / INTERFAITH FOOD BANK</h1>
   </nav>
+  <!-- Main Content -->
   <div class="container">
     <div class="card-deck-wrapper">
       <div class="card-deck">
@@ -30,7 +31,7 @@
             <p class="card-text"><strong>His R.A.F.T.</strong> is a Central Valley nonprofit corporation that has been serving the community for <strong>over 30 years</strong>. Our mission is to provide those in our area with the means to serve the underfed.</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary btn-block btn-lg">Learn More</a>
+            <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#aboutModal">Learn More</button>
           </div>
         </div>
         <div class="card card-warning text-xs-right">
@@ -45,6 +46,25 @@
             </div>
           </div>
           <img src="photos/kevin.jpg" alt="" class="img-fluid card-img-bottom">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- About Modal -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content bg-info">
+        <div class="modal-header">
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">ABOUT US VIDEO</h4>
+        </div>
+        <div class="modal-body">
+          <video src="http://raft.zerodaedalus.com/wp-content/uploads/sites/5/2016/10/His-RAFT.mp4" class="img-fluid" controls>Your browser does not supportr the <code>video</code> element.</video>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-lg btn-block btn-danger">Contact Us</button>
         </div>
       </div>
     </div>
