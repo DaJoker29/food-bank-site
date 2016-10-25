@@ -17,4 +17,10 @@ $(function() {
     lazyLoad: true,
     pagination: false
   });
+
+});
+
+$(window).on('load', function() {
+  // Remove Preloader
+  $('#preloader').fadeOut();
 });
