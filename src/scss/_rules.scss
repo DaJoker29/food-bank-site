@@ -30,7 +30,7 @@
     transition: .3s ease-in-out;
   }
   &:hover {
-    box-shadow: 0 .125rem .125rem $black;
+    box-shadow: 0 0 .125rem $black;
     img {
       filter: sepia(0);
     }
@@ -68,4 +68,13 @@
     top: 50%;
     background: url('preloader.gif') no-repeat center;
     margin: -100px 0 0 -100px;
+}
+
+// ScrollPos Styler
+.sps {
+  transition: .3s all;
+}
+
+.sps--blw {
+  box-shadow: 0 0 .125rem $black;
 }
