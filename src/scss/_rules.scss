@@ -24,7 +24,17 @@
 // Bootstrap Overrides
 .card {
   border: 0;
-  box-shadow: 0 .125rem .125rem $black;
+  transition: .3s ease-in-out;
+  img {
+    filter: sepia(60%);
+    transition: .3s ease-in-out;
+  }
+  &:hover {
+    box-shadow: 0 .125rem .125rem $black;
+    img {
+      filter: sepia(0);
+    }
+  }
 }
 
 .navbar-dark .navbar-brand {
