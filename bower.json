@@ -1,0 +1,19 @@
+{
+  "name": "food-bank-site",
+  "description": "Food Bank Website Project",
+  "main": "Gruntfile.js",
+  "authors": [
+    "Dewitt A. Buckingham",
+    "III <captain@zerodaedalus.net> (http://zerodaedalus.com)"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/DaJoker29/food-bank-site",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
