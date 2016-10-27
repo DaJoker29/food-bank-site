@@ -35,7 +35,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/style.css': ['src/scss/style.scss']
+          'dist/css/style.css': ['src/scss/style.scss']
         }
       }
     },
@@ -46,7 +46,7 @@ module.exports = function(grunt) {
         ]
       },
       dist: {
-        src: 'dist/style.css',
+        src: 'dist/css/style.css',
         map: true
       }
     },
@@ -57,9 +57,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'dist',
+          cwd: 'dist/css',
           src: 'style.css',
-          dest: 'dist',
+          dest: 'dist/css',
           ext: '.min.css'
         }]
       }
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
           compress: false
         },
         files: {
-          'dist/script.js': ['src/js/**/*.js']
+          'dist/js/script.js': ['src/js/**/*.js']
         }
       },
       prod: {
@@ -82,7 +82,7 @@ module.exports = function(grunt) {
           sourceMap: true
         },
         files: {
-          'dist/script.min.js': ['src/js/**/*.js']
+          'dist/js/script.min.js': ['src/js/**/*.js']
         }
       }
     },
