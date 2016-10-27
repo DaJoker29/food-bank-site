@@ -6,7 +6,8 @@
   "main": "Gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "eslint --config .eslintrc src/js"
+    "eslint": "eslint --config .eslintrc src/js",
+    "bootstrap": "cd bootstrap && grunt dist"
   },
   "repository": {
     "url": "git+https://github.com/DaJoker29/food-bank-site.git",
@@ -26,6 +27,7 @@
     "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^19.0.0",
+    "grunt-exec": "1.0.1",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
     "load-grunt-tasks": "^3.5.2"

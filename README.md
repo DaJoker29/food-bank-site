@@ -2,6 +2,7 @@
 
 Build Instructions
 -------------------
+* Project requires the Bootstrap source repo installed on the top-level. *
 
 First, use [Node/NPM](https://nodejs.org/) to install dependencies
 
