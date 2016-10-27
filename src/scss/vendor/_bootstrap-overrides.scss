@@ -13,8 +13,11 @@
   }
 }
 
-.modal-content {
-  color: $black !important;
+.card-warning,
+.card-success,
+.bg-success,
+.bg-warning {
+  color: $black;
 }
 
 .modal-open {

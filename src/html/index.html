@@ -19,7 +19,7 @@
 <!-- Start of Content -->
 <body class="bg-info">
   <!-- Preloader -->
-  <div id="preloader" class="bg-warning">
+  <div id="preloader" class="bg-primary">
     <div class="container">
       <p class="text-xs-center lead">If your page doesn't load, please make sure that <strong>JavaScript</strong> is enabled. This page requires it.</p>
     </div>
@@ -35,31 +35,47 @@
   <div class="container">
     <div class="card-deck-wrapper">
       <div class="card-deck">
+        <!-- Card #1 -->
         <div href="#" class="card card-primary">
           <img src="assets/boss.jpg" alt="" class="img-fluid card-img-top">
           <div class="card-header">
-            <h3 class="card-title">INFORMATION <i class="fa fa-newspaper-o"></i></h3>
+            <h3 class="card-title">INFORMATION</h3>
             <p class="card-subtitle">Find out more about us.</p>
           </div>
           <div class="card-block text-xs-center">
             <p class="card-text"><strong>His R.A.F.T.</strong> is a Central Valley nonprofit corporation that has been serving the community for <strong>over 30 years</strong>. Our mission is to provide those in our area with the means to serve the underfed.</p>
           </div>
           <div class="card-footer">
-            <button type="button" class="btn btn-warning btn-block btn-lg" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-film"></i> Learn More</button>
+            <button type="button" class="btn btn-danger btn-block btn-lg" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-film"></i> Learn More</button>
           </div>
         </div>
-        <div class="card card-primary text-md-right">
+        <!-- Card #2 -->
+        <div class="card card-warning">
+          <img src="assets/kevin.jpg" alt="" class="img-fluid card-img-top">
           <div class="card-header">
-            <h3 class="card-title">CONTACT US <i class="fa fa-comment-o"></i></h3>
+            <h3 class="card-title">CONTACT US</h3>
             <p class="card-subtitle">Get in touch today</p>
           </div>
           <div class="card-block text-xs-center">
             <p class="card-text">We operate mainly as a distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
             <div class="card-footer">
-              <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send"></i> Email Us</button>
+              <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Email Us</button>
             </div>
           </div>
-          <img src="assets/kevin.jpg" alt="" class="img-fluid card-img-bottom">
+        </div>
+        <!-- Card #3 -->
+        <div class="card card-danger">
+          <img src="assets/carousel3.jpg" alt="" class="img-fluid card-img-top">
+          <div class="card-header">
+            <h3 class="card-title">MISSION GIFT</h3>
+            <p class="card-subtitle">Save time and pay online.</p>
+          </div>
+          <div class="card-block text-xs-center">
+            <p class="card-text">If you are an <strong>food bank affiliate</strong>, you can send your monthly charter payment online through our <strong>Square online marketplace</strong>. It is a safe and secure means to pay quickly and easily. If you are looking to donate, please <a href="#" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
+            <div class="card-footer">
+              <button type="button" class="btn btn-primary btn-block btn-lg"><i class="fa fa-fw fa-credit-card"></i> Pay Online</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -72,7 +88,6 @@
     <div id="img-carousel" class="img-carousel">
       <div class="item"><img src="assets/carousel1.jpg" class="rounded" alt=""></div>
       <div class="item"><img src="assets/carousel2.jpg" class="rounded" alt=""></div>
-      <div class="item"><img src="assets/carousel3.jpg" class="rounded" alt=""></div>
       <div class="item"><img src="assets/carousel4.jpg" class="rounded" alt=""></div>
       <div class="item"><img src="assets/carousel5.jpg" class="rounded" alt=""></div>
       <div class="item"><img src="assets/carousel6.jpg" class="rounded" alt=""></div>
@@ -87,7 +102,7 @@
   <!-- About Modal -->
   <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content bg-warning">
+      <div class="modal-content bg-danger">
         <!-- About/Header -->
         <div class="modal-header">
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
