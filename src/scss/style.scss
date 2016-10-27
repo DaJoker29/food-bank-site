@@ -1,3 +1,11 @@
-@import 'variables';
-@import 'globals';
-@import 'rules';
+// Modules
+@import 'modules/variables';
+
+// Partials
+@import 'partials/globals';
+@import 'partials/carousel';
+@import 'partials/preloader';
+
+// Third-Party
+@import 'vendor/bootstrap-overrides';
+@import 'vendor/scrollPos';
