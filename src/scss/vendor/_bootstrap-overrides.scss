@@ -13,13 +13,8 @@
   }
 }
 
-.navbar-dark .navbar-brand {
-  color: $white;
-}
-
-.modal .bg-warning,
-.modal .bg-info {
-  color: rgb(55, 58, 60) !important;
+.modal-content {
+  color: $black !important;
 }
 
 .modal-open {
