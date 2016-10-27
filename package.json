@@ -5,7 +5,8 @@
   "description": "Food Bank Website",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eslint": "eslint --config .eslintrc src/js"
   },
   "repository": {
     "url": "git+https://github.com/DaJoker29/food-bank-site.git",
@@ -17,7 +18,15 @@
   },
   "homepage": "https://github.com/DaJoker29/food-bank-site#readme",
   "dependencies": {
+    "autoprefixer": "^6.5.1",
     "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^19.0.0",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.2.1",
     "load-grunt-tasks": "^3.5.2"
   }
 }
