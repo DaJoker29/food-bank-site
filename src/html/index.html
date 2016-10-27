@@ -19,60 +19,79 @@
 <!-- Start of Content -->
 <body class="bg-info">
   <!-- Preloader -->
-  <div id="preloader" class="bg-warning">
-    <div class="container">
-      <p class="text-xs-center lead">If your page doesn't load, please make sure that <strong>JavaScript</strong> is enabled. This page requires it.</p>
-    </div>
+  <div id="preloader" class="bg-primary">
+    <p class="text-xs-center lead">If your page doesn't load, please make sure that <strong>JavaScript</strong> is enabled. This page requires it.</p>
     <div id="status">&nbsp;</div>
   </div>
   <!-- Fixed Navbar -->
   <nav class="navbar navbar-fixed-top navbar-light bg-info sps">
-    <div class="container">
+    <div class="container-fluid">
       <h2 class="navbar-brand text-uppercase text-xs-center text-primary"><i class="fa fa-group"></i> His RAFT Inc. / Interfaith Food Bank</h2>
     </div>
   </nav>
   <!-- Main Content -->
-  <div class="container">
+  <div class="container-fluid">
     <div class="card-deck-wrapper">
       <div class="card-deck">
+        <!-- Card #1 -->
         <div href="#" class="card card-primary">
-          <img src="assets/boss.jpg" alt="" class="img-fluid card-img-top">
-          <div class="card-header">
-            <h3 class="card-title">INFORMATION <i class="fa fa-newspaper-o"></i></h3>
-            <p class="card-subtitle">Find out more about us.</p>
-          </div>
-          <div class="card-block text-xs-center">
-            <p class="card-text"><strong>His R.A.F.T.</strong> is a Central Valley nonprofit corporation that has been serving the community for <strong>over 30 years</strong>. Our mission is to provide those in our area with the means to serve the underfed.</p>
-          </div>
-          <div class="card-footer">
-            <button type="button" class="btn btn-warning btn-block btn-lg" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-film"></i> Learn More</button>
-          </div>
-        </div>
-        <div class="card card-primary text-md-right">
-          <div class="card-header">
-            <h3 class="card-title">CONTACT US <i class="fa fa-comment-o"></i></h3>
-            <p class="card-subtitle">Get in touch today</p>
-          </div>
-          <div class="card-block text-xs-center">
-            <p class="card-text">We operate mainly as a distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
-            <div class="card-footer">
-              <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send"></i> Email Us</button>
+          <div class="relative">
+            <img src="assets/boss.jpg" alt="" class="img-fluid card-img-top">
+            <div class="card-img-overlay text-primary light-shadow">
+              <h3 class="card-title">INFORMATION</h3>
+              <p class="card-subtitle">Find out more about us.</p>
             </div>
           </div>
-          <img src="assets/kevin.jpg" alt="" class="img-fluid card-img-bottom">
+          <div class="card-block text-xs-center">
+            <p>
+              <button type="button" class="btn btn-danger btn-block btn-lg" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-film"></i> Learn More</button>
+            </p>
+            <p class="card-text"><strong>His R.A.F.T.</strong> is a Central Valley nonprofit corporation that has been serving the community for <strong>over 30 years</strong>. Our mission is to provide those in our area with the means to serve the underfed.</p>
+          </div>
+        </div>
+        <!-- Card #2 -->
+        <div class="card card-warning">
+          <div class="relative">
+            <img src="assets/kevin.jpg" alt="" class="img-fluid card-img-top">
+            <div class="card-img-overlay text-warning dark-shadow">
+              <h3 class="card-title">CONTACT US</h3>
+              <p class="card-subtitle">Get in touch today</p>
+            </div>
+          </div>
+          <div class="card-block text-xs-center">
+            <p class="card-text">
+              <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Email Us</button>
+            </p>
+            <p class="card-text">We operate mainly as a distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
+          </div>
+        </div>
+        <!-- Card #3 -->
+        <div class="card card-danger">
+          <div class="relative">
+            <img src="assets/carousel3.jpg" alt="" class="img-fluid card-img-top">
+            <div class="card-img-overlay text-danger light-shadow">
+              <h3 class="card-title">MISSION GIFT</h3>
+              <p class="card-subtitle">Save time and pay online.</p>
+            </div>
+          </div>
+          <div class="card-block text-xs-center">
+            <p>
+              <button type="button" class="btn btn-primary btn-block btn-lg"><i class="fa fa-fw fa-credit-card"></i> Pay Online</button>
+            </p>
+            <p class="card-text">If you are an <strong>food bank affiliate</strong>, you can send your monthly charter payment online through our <strong>Square online marketplace</strong>. It is a safe and secure means to pay quickly and easily. If you are looking to donate, please <a href="#" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <!-- Image Carousel -->
   <div class="jumbotron jumbotron-fluid bg-info">
-    <div class="container">
+    <div class="container-fluid">
       <h1 class="display-4 text-primary">EVENT GALLERY</h1>
     </div>
     <div id="img-carousel" class="img-carousel">
       <div class="item"><img src="assets/carousel1.jpg" class="rounded" alt=""></div>
       <div class="item"><img src="assets/carousel2.jpg" class="rounded" alt=""></div>
-      <div class="item"><img src="assets/carousel3.jpg" class="rounded" alt=""></div>
       <div class="item"><img src="assets/carousel4.jpg" class="rounded" alt=""></div>
       <div class="item"><img src="assets/carousel5.jpg" class="rounded" alt=""></div>
       <div class="item"><img src="assets/carousel6.jpg" class="rounded" alt=""></div>
@@ -80,14 +99,14 @@
   </div>
   <!-- Footer -->
   <div class="navbar navbar-light bg-info navbar-full">
-    <div class="container">
+    <div class="container-fluid">
       <p class="navbar-text text-muted">Crafted by: <a href="http://zerodaedalus.com"> <i class="fa fa-code"></i> Zero Daedalus</a></p>
     </div>
   </div>
   <!-- About Modal -->
   <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content bg-warning">
+      <div class="modal-content bg-danger">
         <!-- About/Header -->
         <div class="modal-header">
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">

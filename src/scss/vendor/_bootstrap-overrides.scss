@@ -2,21 +2,20 @@
   border: 0;
   transition: .3s ease-in-out;
   img {
-    filter: sepia(60%);
+    filter: grayscale(80%);
     transition: .3s ease-in-out;
   }
   &:hover {
     box-shadow: 0 0 .125rem $black;
     img {
-      filter: sepia(0);
+      filter: grayscale(0);
     }
   }
 }
 
-.modal-content {
-  color: $black !important;
-}
-
-.modal-open {
-  padding-right: 0 !important;
+.card-warning,
+.card-success,
+.bg-success,
+.bg-warning {
+  color: $black;
 }
