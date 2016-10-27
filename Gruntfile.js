@@ -24,6 +24,10 @@ module.exports = function(grunt) {
         files: ['assets/**'],
         tasks: ['copy:assets']
       },
+      bootstrap: {
+        files: ['bootstrap/js/**/*.js', 'bootstrap/scss/**/*.scss'],
+        tasks: ['bootstrap']
+      },
       livereload: {
         options: { livereload: true },
         files: ['dist/**/*']
@@ -93,8 +97,9 @@ module.exports = function(grunt) {
     copy: {
       vendor: {
         expand: true,
-        src: 'vendor/**',
-        dest: 'dist/'
+        cwd: 'vendor',
+        src: '**/*',
+        dest: 'dist/vendor'
       },
       assets: {
         expand: true,
@@ -106,6 +111,17 @@ module.exports = function(grunt) {
         cwd: 'src/html',
         src: '**',
         dest: 'dist/'
+      },
+      bootstrap: {
+        expand: true,
+        cwd: 'bootstrap/dist',
+        src: '**/*',
+        dest: 'dist/vendor/bootstrap'
+      }
+    },
+    exec: {
+      compile_bootstrap: {
+        command: 'npm run bootstrap'
       }
     }
   });
@@ -122,9 +138,14 @@ module.exports = function(grunt) {
     ['sass', 'postcss', 'cssmin']
     );
   grunt.registerTask(
+    'bootstrap',
+    'Compile Bootstrap',
+    ['exec:compile_bootstrap', 'copy:bootstrap']
+  );
+  grunt.registerTask(
     'build',
     'Build project',
-    ['clean', 'copy', 'build-js', 'build-css']
+    ['clean', 'copy', 'bootstrap', 'build-js', 'build-css',]
     );
   grunt.registerTask(
     'default',
