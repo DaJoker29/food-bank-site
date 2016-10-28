@@ -1,6 +1,7 @@
 /* eslint-disable */
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
+  require('time-grunt')(grunt);
 
   grunt.initConfig({
     watch: {
@@ -24,9 +25,13 @@ module.exports = function(grunt) {
         files: ['assets/**'],
         tasks: ['copy:assets']
       },
-      bootstrap: {
-        files: ['bootstrap/js/**/*.js', 'bootstrap/scss/**/*.scss'],
-        tasks: ['bootstrap']
+      'bootstrap-js': {
+        files: ['bootstrap/js/**/*.js'],
+        tasks: ['bootstrap-js']
+      },
+      'bootstrap-css': {
+        files: ['bootstrap/scss/**/*.scss'],
+        tasks: ['bootstrap-css']
       },
       livereload: {
         options: { livereload: true },
@@ -117,12 +122,30 @@ module.exports = function(grunt) {
         cwd: 'bootstrap/dist',
         src: '**/*',
         dest: 'dist/vendor/bootstrap'
-      }
+      },
+      'bootstrap-js': {
+        expand: true,
+        cwd: 'bootstrap/dist/js',
+        src: '**/*',
+        dest: 'dist/vendor/bootstrap/js'
+      },
+      'bootstrap-css': {
+        expand: true,
+        cwd: 'bootstrap/dist/css',
+        src: '**/*',
+        dest: 'dist/vendor/bootstrap/css'
+      },
     },
     exec: {
-      compile_bootstrap: {
+      'compile-bs': {
         command: 'npm run bootstrap'
-      }
+      },
+      'compile-bs-js': {
+        command: 'npm run bootstrap-js'
+      },
+      'compile-bs-css': {
+        command: 'npm run bootstrap-css'
+      },
     }
   });
 
@@ -138,9 +161,19 @@ module.exports = function(grunt) {
     ['sass', 'postcss', 'cssmin']
     );
   grunt.registerTask(
+    'bootstrap-js',
+    'Compile Bootstrap JavaScript source files',
+    ['exec:compile-bs-js', 'copy:bootstrap-js']
+  );
+  grunt.registerTask(
+    'bootstrap-css',
+    'Compile Bootstrap Sass source files',
+    ['exec:compile-bs-css', 'copy:bootstrap-css']
+  );
+  grunt.registerTask(
     'bootstrap',
     'Compile Bootstrap',
-    ['exec:compile_bootstrap', 'copy:bootstrap']
+    ['exec:compile-bs', 'copy:bootstrap']
   );
   grunt.registerTask(
     'build',
