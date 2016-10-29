@@ -5,16 +5,14 @@
     filter: grayscale(80%);
     transition: .3s ease-in-out;
   }
-  &:hover {
-    box-shadow: 0 0 .125rem $black;
-    img {
-      filter: grayscale(0);
-    }
+  &:hover img {
+    filter: grayscale(0);
   }
 }
 
 .card-warning,
 .card-success,
+.card-info,
 .bg-success,
 .bg-warning,
 .btn-outline-warning:hover,
