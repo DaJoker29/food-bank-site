@@ -10,8 +10,26 @@
   text-shadow: 1px 1px 0 $white;
 }
 
+.hover-shadow:hover {
+  box-shadow: 0 0 .125rem $black;
+}
+
 .ribbon {
   border-right-width: 0;
   border-left-width: 0;
   border-radius: 0;
+}
+
+.google-maps {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+  overflow: hidden;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
 }
