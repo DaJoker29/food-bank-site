@@ -62,17 +62,17 @@
           </div>
         </div>
         <!-- Card #2 -->
-        <div class="card card-warning">
+        <div class="card card-success">
           <div class="relative">
             <img src="assets/kevin.jpg" alt="" class="img-fluid card-img-top">
-            <div class="card-img-overlay text-warning dark-shadow">
+            <div class="card-img-overlay text-success dark-shadow">
               <h3 class="card-title">CONTACT US</h3>
               <p class="card-subtitle">Get in touch today</p>
             </div>
           </div>
           <div class="card-block text-xs-center">
             <p class="card-text">
-              <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Email Us</button>
+              <button type="button" class="btn btn-warning btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Email Us</button>
             </p>
             <p class="card-text">We operate mainly as a distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
           </div>
@@ -117,22 +117,23 @@
   </div>
   <!-- About Modal -->
   <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" aria-labelledby="aboutModal" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content bg-danger">
         <!-- About/Header -->
-        <div class="modal-header">
+<!--         <div class="modal-header">
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
           <h4 class="modal-title">ABOUT US VIDEO</h4>
-        </div>
+        </div> -->
         <!-- About/Body -->
         <div class="modal-body">
           <video src="http://raft.zerodaedalus.com/wp-content/uploads/sites/5/2016/10/His-RAFT.mp4" class="img-fluid" controls>Your browser does not support the <code>video</code> element.</video>
         </div>
         <!-- About/Footer -->
         <div class="modal-footer">
-          <button type="button" id="aboutModalCTA" class="btn btn-lg btn-block btn-success" data-dismiss="modal">Contact Us</button>
+          <button type="button" id="aboutModalCTA" class="btn btn-lg btn-success" data-dismiss="modal"><i class="fa fa-send"></i> Contact Us</button>
+          <button type="button" class="btn btn-outline-warning" data-dismiss="modal"><i class="fa fa-close"></i> Exit</button>
         </div>
       </div>
     </div>
@@ -140,14 +141,14 @@
   <!-- Contact Modal -->
   <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content bg-success">
+      <div class="modal-content bg-warning">
         <!-- Contact/Header -->
-        <div class="modal-header">
+<!--         <div class="modal-header">
           <button class="close" type="button" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
           <h4 class="modal-title">CONTACT US</h4>
-        </div>
+        </div> -->
         <!-- Contact/Body -->
         <div class="modal-body">
           <p>We're open from <strong>9am to 2pm (Closed on Thursdays and Sundays)</strong></p>
@@ -188,7 +189,8 @@
                 <textarea name="msg" rows="3" class="form-control"></textarea>
               </div>
             </div>
-            <button type="submit" class="btn btn-lg btn-primary">Send</button>
+            <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-send"></i> Send</button>
+            <button type="button" class="btn btn-outline-success" data-dismiss="modal"><i class="fa fa-close"></i> Exit</button>
           </form>
         </div>
       </div>

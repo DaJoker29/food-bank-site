@@ -16,6 +16,8 @@
 .card-warning,
 .card-success,
 .bg-success,
-.bg-warning {
+.bg-warning,
+.btn-outline-warning:hover,
+.btn-outline-success:hover {
   color: $black;
 }
