@@ -83,7 +83,11 @@ module.exports = function(grunt) {
           compress: false
         },
         files: {
-          'dist/js/script.js': ['src/js/**/*.js']
+          'dist/js/script.js': [
+            'src/js/**/*.js',
+            'vendor/scrollPosStyler.js',
+            'vendor/owl-carousel/owl.carousel.js'
+          ]
         }
       },
       prod: {
@@ -91,7 +95,11 @@ module.exports = function(grunt) {
           sourceMap: true
         },
         files: {
-          'dist/js/script.min.js': ['src/js/**/*.js']
+          'dist/js/script.min.js': [
+            'src/js/**/*.js',
+            'vendor/scrollPosStyler.js',
+            'vendor/owl-carousel/owl.carousel.js'
+          ]
         }
       }
     },
