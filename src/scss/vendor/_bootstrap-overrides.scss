@@ -1,0 +1,21 @@
+.card {
+  border: 0;
+  transition: .3s ease-in-out;
+  img {
+    filter: grayscale(80%);
+    transition: .3s ease-in-out;
+  }
+  &:hover img {
+    filter: grayscale(0);
+  }
+}
+
+.card-warning,
+.card-success,
+.card-info,
+.bg-success,
+.bg-warning,
+.btn-outline-warning:hover,
+.btn-outline-success:hover {
+  color: $black;
+}

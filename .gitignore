@@ -27,8 +27,14 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
-# Sass Cache
-.sass-cache/
+# Public (Output) Folder
+dist
 
-#Deployment Files
-public/
+# Sass Cache
+.sass-cache
+
+# Documentation
+doc
+
+# Bootstrap
+bootstrap

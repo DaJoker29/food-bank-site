@@ -1,104 +1,144 @@
+/* eslint-disable */
 module.exports = function(grunt) {
-    grunt.initConfig({
-        sass: {
-            dev: {
-                expand: true,
-                cwd: 'sass',
-                src: ['**/*.scss'],
-                dest: 'public',
-                ext: '.css',
-                options: {
-                    style: 'expanded',
-                }
-            },
-            prod: {
-                expand: true,
-                cwd: 'sass',
-                src: ['**/*.scss'],
-                dest: 'public',
-                ext: '.css',
-                options: {
-                    style: 'compressed',
-                    sourcemap: 'none'
-                }
-            }
-        },
-        watch: {
-            options: {
-                livereload: true,
-            },
-            sass: {
-                files: 'sass/**/*.scss',
-                tasks: ['sass:dev', 'autoprefixer:dev']
-            },
-            js: {
-                files: 'javascript/**/*.js',
-                tasks: ['jshint', 'uglify:dev']
-            },
-            php: {
-                files: ['templates/**/*.php']
-            }
+  require('load-grunt-tasks')(grunt);
+  require('time-grunt')(grunt);
 
-        },
-        jshint: {
-            all: ['javascript/**/*.js']
-        },
-        uglify: {
-            dev: {
-                options: {
-                    sourceMap: true,
-                    mangle: false,
-                    beautify: true,
-                    preserveComments: 'all',
-                    compress: false
-                },
-                files: {
-                    'public/script.js': ['javascript/**/*.js']
-                }
-            },
-            prod: {
-                files: {
-                    'public/script.js': ['javascript/**/*.js']
-                }
-            }
-        },
-        clean: {
-            all: ["public/"]
-        },
-        copy: {
-            pics: {
-                cwd: 'pics',
-                src: '*.jpg',
-                dest: 'public',
-                expand: true
-            },
-            php: {
-                cwd: 'templates',
-                src: 'index.php',
-                dest: 'public',
-                expand: true
-            }
-        },
-        autoprefixer: {
-            dev: {
-                src: 'public/style.css',
-                map: true
-            },
-            prod: {
-                src: 'public/style.css'
-            }
+  grunt.initConfig({
+    watch: {
+      sass: {
+        files: ['src/scss/**/*.scss', 'bootstrap/scss/_custom.scss'],
+        tasks: ['build-css']
+      },
+      js: {
+        files: ['src/js/**/*.js'],
+        tasks: ['build-js']
+      },
+      html: {
+        files: ['src/html/**/*.html'],
+        tasks: ['copy:html']
+      },
+      vendor: {
+        files: ['vendor/**'],
+        tasks: ['copy:vendor']
+      },
+      assets: {
+        files: ['assets/**'],
+        tasks: ['copy:assets']
+      },
+      livereload: {
+        options: { livereload: true },
+        files: ['dist/**/*']
+      }
+    },
+    sass: {
+      options: {
+        sourceMap: true
+      },
+      dist: {
+        files: {
+          'dist/css/style.css': ['src/scss/style.scss']
         }
-    });
+      }
+    },
+    postcss: {
+      options: {
+        processors: [
+        require('autoprefixer')({browsers: 'last 2 versions'})
+        ]
+      },
+      dist: {
+        src: 'dist/css/style.css',
+        map: true
+      }
+    },
+    cssmin: {
+      options: {
+        sourceMap: true
+      },
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'dist/css',
+          src: 'style.css',
+          dest: 'dist/css',
+          ext: '.min.css'
+        }]
+      }
+    },
+    uglify: {
+      dev: {
+        options: {
+          sourceMap: true,
+          mangle: false,
+          beautify: true,
+          preserveComments: 'all',
+          compress: false
+        },
+        files: {
+          'dist/js/script.js': [
+            'src/js/**/*.js',
+            'vendor/scrollPosStyler.js',
+            'vendor/owl-carousel/owl.carousel.js'
+          ]
+        }
+      },
+      prod: {
+        options: {
+          sourceMap: true
+        },
+        files: {
+          'dist/js/script.min.js': [
+            'src/js/**/*.js',
+            'vendor/scrollPosStyler.js',
+            'vendor/owl-carousel/owl.carousel.js'
+          ]
+        }
+      }
+    },
+    eslint: {
+      target: ['src/js/**/*.js']
+    },
+    clean: [ 'dist' ],
+    copy: {
+      vendor: {
+        expand: true,
+        cwd: 'vendor',
+        src: '**/*',
+        dest: 'dist/vendor'
+      },
+      assets: {
+        expand: true,
+        src: 'assets/**',
+        dest: 'dist/'
+      },
+      html: {
+        expand: true,
+        cwd: 'src/html',
+        src: '**',
+        dest: 'dist/'
+      }
+    }
+  });
 
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-
-    grunt.registerTask('dev', ['clean', 'copy', 'jshint', 'uglify:dev', 'sass:dev' , 'autoprefixer:dev']);
-    grunt.registerTask('prod', [ 'clean', 'copy', 'jshint', 'uglify:prod', 'sass:prod', 'autoprefixer:prod']);
-    grunt.registerTask('default', ['dev', 'watch']);
+  // JS Build Tasks
+  grunt.registerTask(
+    'build-js',
+    'Compile Scripts',
+    ['eslint', 'uglify']
+    );
+  grunt.registerTask(
+    'build-css',
+    'Compile CSS',
+    ['sass', 'postcss', 'cssmin']
+    );
+  grunt.registerTask(
+    'build',
+    'Build project',
+    ['clean', 'copy', 'build-js', 'build-css',]
+    );
+  grunt.registerTask(
+    'default',
+    'Build development version and run watch server',
+    ['build', 'watch']
+    );
 };
