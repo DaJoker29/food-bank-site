@@ -4,6 +4,30 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+    banner: '/*!\n' +
+            ' * ========================================================================\n' +
+            ' * <%= pkg.name %> | v<%= pkg.version %> | <%= pkg.license %> License\n' +
+            ' * <%= pkg.homepage %>\n' +
+            ' *\n' +
+            ' * Copyright <%= grunt.template.today("yyyy") %> <<%= pkg.author %>>\n' +
+            ' * ========================================================================\n' +
+            ' */\n',
+    stamp: {
+      options: {
+        banner: '<%= banner %>',
+      },
+      css: {
+        files: {
+          src: 'dist/css/*.css'
+        }
+      },
+      js: {
+        files: {
+          src: 'dist/js/*.js'
+        }
+      }
+    },
     watch: {
       sass: {
         files: ['src/scss/**/*.scss', 'bootstrap/scss/_custom.scss'],
@@ -124,17 +148,17 @@ module.exports = function(grunt) {
   grunt.registerTask(
     'build-js',
     'Compile Scripts',
-    ['eslint', 'uglify']
+    ['eslint', 'uglify', 'stamp:js']
     );
   grunt.registerTask(
     'build-css',
     'Compile CSS',
-    ['sass', 'postcss', 'cssmin']
+    ['sass', 'postcss', 'stamp:css', 'cssmin']
     );
   grunt.registerTask(
     'build',
     'Build project',
-    ['clean', 'copy', 'build-js', 'build-css',]
+    ['clean', 'copy', 'build-js', 'build-css']
     );
   grunt.registerTask(
     'default',
