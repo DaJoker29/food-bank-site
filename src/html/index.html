@@ -81,9 +81,9 @@
           </div>
           <div class="card-block text-xs-center">
             <p>
-              <button type="button" class="btn btn-primary btn-block btn-lg"><i class="fa fa-fw fa-credit-card"></i> Pay Online</button>
+              <button type="button" class="btn btn-primary btn-block btn-lg" disabled><i class="fa fa-fw fa-credit-card"></i> Coming Soon</button>
             </p>
-            <p class="card-text">If you are an <strong>food bank affiliate</strong>, you can send your monthly charter payment online through our <strong>Square online marketplace</strong>. It is a safe and secure means to pay quickly and easily. If you are looking to donate, please <a href="#" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
+            <p class="card-text">In an effort to ease the burden on our affiliates, we will soon allow mission gift payments online. It is a safe and secure alternative to cash and check for our <b>food bank affiliates.</b> However, if you are looking to make a donation, please <a href="#" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
           </div>
         </div>
       </div>
@@ -95,9 +95,12 @@
             <p class="lead font-italic">We only provide food to 501(c)(3) nonprofit organizations. <span class="font-weight-bold">We do not give directly to the public. Contact your local emergency food bank if you are in need.</span></p>
             <p class="lead">We're open from 9am to 2pm everyday (except Thursdays and Sundays)</p>
             <p class="lead">To discuss donations or receiving food for your nonprofit, speak with John or Diosa.</p>
-            <p>
-              <a href="#" type="button" class="btn btn-block btn-lg btn-outline-primary"><i class="fa fa-phone"></i> Call</a>
-              <a href="#" type="button" class="btn btn-block btn-lg btn-outline-danger"><i class="fa fa-envelope"></i> Email</a>
+            <p class="lead">
+              <i class="fa fa-phone"></i> (209) 460-1044 <br>
+              <i class="fa fa-envelope"></i> hisraft@gmail.com <br>
+            </p>
+            <p class="lead">
+              <i class="fa fa-globe"></i> 2209 E. Main Street, Stockton, CA, 95205
             </p>
           </p>
         </div>
@@ -154,35 +157,38 @@
         <!-- Contact/Body -->
         <div class="modal-body">
           <!-- contact form -->
-          <form>
+          <form action="https://formspree.io/dj729@comcast.net" method="POST">
+            <input type="hidden" name="_subject" value="Website Contact Submission" />
+            <!-- <input type="hidden" name="_cc" value="hisraft@gmail.com" /> -->
+            <input type="hidden" name="_gotcha" style="display:none;" />
             <div class="form-group">
               <label for="name">Name (required)</label>
-              <input type="text" class="form-control" id="inputName">
+              <input type="text" class="form-control" id="inputName" name="name" required>
             </div>
             <div class="form-group">
               <label for="organization">Organization (required)</label>
-              <input type="text" class="form-control" id="inputOrg">
+              <input type="text" class="form-control" id="inputOrg" name="organization" required>
             </div>
             <div class="form-group">
               <label for="email">Email (required)</label>
-              <input type="email" class="form-control" id="inputEmail">
+              <input type="email" class="form-control" id="inputEmail" name="email" required>
             </div>
             <div class="form-group">
               <label for="type">You are a...</label>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="typeRadio" id="radio1" value="business" checked>Business looking to donate goods or equipment
+                  <input type="radio" class="form-check-input" name="orgType" id="radio1" value="business" checked>Business looking to donate goods or equipment
                 </label>
               </div>
               <div class="form-check">
                 <label class="form-check-label">
-                  <input type="radio" class="form-check-input" name="typeRadio" id="radio2" value="nonprofit">Nonprofit looking to receive food
+                  <input type="radio" class="form-check-input" name="orgType" id="radio2" value="nonprofit">Nonprofit looking to receive food
                 </label>
               </div>
               <div class="form-group">
                 <label for="inputMsg">Additional Details</label>
                 <small class="form-text text-muted">Donation details, nonprofit information, additional contact info, etc.</small>
-                <textarea name="msg" rows="3" class="form-control"></textarea>
+                <textarea name="message" rows="3" class="form-control"></textarea>
               </div>
             </div>
             <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-send"></i> Send</button>
