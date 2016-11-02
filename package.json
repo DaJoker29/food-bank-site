@@ -7,9 +7,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint --config .eslintrc src/js",
-    "bootstrap": "cd bootstrap && grunt dist",
-    "bootstrap-js": "cd bootstrap && grunt dist-js",
-    "bootstrap-css": "cd bootstrap && grunt dist-css"
+    "version": "git merge --no-ff develop -m 'Pull changes for %s release'",
+    "postversion": "git push && git push --tags && git checkout develop && git merge --no-ff master -m 'Sync Develop branch'"
   },
   "repository": {
     "url": "git+https://github.com/DaJoker29/food-bank-site.git",
