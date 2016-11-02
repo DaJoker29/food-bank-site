@@ -19,3 +19,12 @@
 .btn-outline-success:hover {
   color: $black;
 }
+
+.display-1,
+.display-2,
+.display-3,
+.display-4,
+.navbar-brand,
+.card-title {
+  text-shadow: 1px 1px $white, 2px 2px transparentize($black, .2);
+}
