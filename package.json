@@ -14,11 +14,11 @@
     "url": "git+https://github.com/DaJoker29/food-bank-site.git",
     "type": "git"
   },
-  "author": "Dewitt A. Buckingham, III <captain@zerodaedalus.net> (http://zerodaedalus.com)",
+  "author": "Dewitt Buckingham (http://zerodaedalus.com)",
   "bugs": {
     "url": "https://github.com/DaJoker29/food-bank-site/issues"
   },
-  "homepage": "https://github.com/DaJoker29/food-bank-site#readme",
+  "homepage": "http://raft.zerodaedalus.com",
   "dependencies": {
     "autoprefixer": "^6.5.1",
     "grunt": "^1.0.1",
@@ -31,6 +31,7 @@
     "grunt-exec": "1.0.1",
     "grunt-postcss": "^0.8.0",
     "grunt-sass": "^1.2.1",
+    "grunt-stamp": "0.3.0",
     "load-grunt-tasks": "^3.5.2",
     "time-grunt": "1.4.0"
   }
