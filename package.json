@@ -1,6 +1,6 @@
 {
   "license": "MIT",
-  "version": "2.0.0-2",
+  "version": "2.0.0-3",
   "name": "food-bank-site",
   "description": "Food Bank Website",
   "main": "Gruntfile.js",
