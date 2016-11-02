@@ -9,7 +9,7 @@
     "eslint": "eslint --config .eslintrc src/js",
     "preversion": "git checkout master && git merge --no-ff develop -m 'Pull changes for release bump'",
     "postversion": "git push && git push --tags && git checkout develop && git merge --no-ff master -m 'Sync Develop branch' && git push",
-    "dist": "git checkout master && git pull origin master && grunt build"
+    "dist": "git checkout master && git pull && grunt build"
   },
   "repository": {
     "url": "git+https://github.com/DaJoker29/food-bank-site.git",
