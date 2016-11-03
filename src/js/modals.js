@@ -9,6 +9,3 @@ $('#aboutModalCTA').on('click', function() {
     $('#aboutModal').off('hidden.bs.modal');
   });
 });
-
-
-
