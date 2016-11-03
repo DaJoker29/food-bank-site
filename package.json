@@ -2,8 +2,9 @@
   "license": "MIT",
   "version": "2.0.2",
   "name": "food-bank-site",
-  "description": "A single page design for His Raft, Inc.",
+  "description": "A single page website that I designed for a local nonprofit.",
   "main": "Gruntfile.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint --config .eslintrc src/js",
