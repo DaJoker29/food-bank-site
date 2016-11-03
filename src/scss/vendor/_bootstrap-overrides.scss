@@ -28,3 +28,7 @@
 .card-title {
   text-shadow: 1px 1px $white, 2px 2px transparentize($black, .2);
 }
+
+.modal-open {
+  overflow: visible !important;
+}
