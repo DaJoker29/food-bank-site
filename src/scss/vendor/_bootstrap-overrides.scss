@@ -1,5 +1,4 @@
 .card {
-  border: 0;
   transition: .3s ease-in-out;
   img {
     filter: grayscale(80%);
@@ -7,6 +6,9 @@
   }
   &:hover img {
     filter: grayscale(0);
+  }
+  &:hover:not(.no-hover) {
+    box-shadow: 0 0 .125rem $black;
   }
 }
 
@@ -31,4 +33,20 @@
 
 .modal-open {
   overflow: visible !important;
+}
+
+.navbar-brand {
+  font-family: $font-family-sans-serif;
+}
+
+.card-columns {
+  @include media-breakpoint-only(sm) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 4;
+  }
 }

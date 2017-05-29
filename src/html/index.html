@@ -12,133 +12,139 @@
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <!-- Start of Content -->
-<body class="bg-info">
+<body>
   <!-- Preloader -->
   <div id="preloader" class="bg-primary">
     <p class="text-xs-center lead">If your page doesn't load, please make sure that <strong>JavaScript</strong> is enabled. This page requires it.</p>
     <div id="status">&nbsp;</div>
   </div>
   <!-- Fixed Navbar -->
-  <nav class="navbar navbar-fixed-top navbar-light bg-info sps">
-    <div class="container-fluid">
-      <h2 class="navbar-brand text-uppercase text-primary"><i class="fa fa-group"></i> His RAFT Inc.</h2>
-      <div class="float-xs-right">
-        <a rel="nofollow" href="tel:+12094601044" class="btn btn-outline-warning"><i class="fa fa-phone"></i> <span class="hidden-xs-down">Call</span></a>
-        <a rel="nofollow" href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#contactModal"><i class="fa fa-envelope"></i> <span class="hidden-xs-down">Email</span></a>
-      </div>
-    </div>
+  <nav class="navbar sticky-top navbar-light bg-info sps">
+    <a href="#" class="navbar-brand text-uppercase text-primary"><i class="fa fa-group"></i> His RAFT Inc.</a>
+<!--       <a rel="nofollow" href="tel:+12094601044" class="btn btn-outline-warning" type="button"><i class="fa fa-phone"></i> <span class="hidden-xs-down">Call</span></a>
+      <a rel="nofollow" href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#contactModal" type="button"><i class="fa fa-envelope"></i> <span class="hidden-xs-down">Email</span></a>
+ -->
   </nav>
   <!-- Main Content -->
-  <div class="ribbon alert alert-info text-xs-center" role="alert">
-    <h5 class="alert-heading">
-      We run several nonprofit programs in the community including:
-    </h5>
-    <ul class="mb-0 font-weight-bold list-inline">
-      <li class="list-inline-item">&bull; Interfaith Food Bank</li>
-      <li class="list-inline-item">&bull; Prison Ministry</li>
-      <li class="list-inline-item">&bull; Phillipine Project</li>
-      <li class="list-inline-item">&bull; Equipment Restoration</li>
-    </ul>
-  </div>
   <div class="container">
-    <div class="row">
-      <!-- Card #1 -->
-      <div class="col-md-6">
-        <div class="card card-primary hover-shadow">
-          <div class="relative">
-            <img src="assets/photos/card-1.jpg" alt="" class="img-fluid card-img-top">
-            <div class="card-img-overlay text-primary">
-              <h3 class="card-title">HOW WE WORK</h3>
-              <p class="card-subtitle light-shadow">Find out more about us.</p>
-            </div>
+    <div class="card-columns mt-4">
+      <!-- Programs Card -->
+      <div class="card card-outline-primary text-primary no-border no-hover">
+        <h5 class="card-title">
+          We run several nonprofit programs in the community including:
+        </h5>
+        <ul class="lead">
+          <li class="">Interfaith Food Bank</li>
+          <li class="">Prison Ministry</li>
+          <li class="">Phillipine Project</li>
+          <li class="">Equipment Restoration</li>
+        </ul>
+      </div>
+
+      <!-- How We Work Card -->
+      <div class="card card-primary no-border">
+        <div class="relative">
+          <img src="assets/photos/card-1.jpg" alt="" class="img-fluid card-img-top">
+          <div class="card-img-overlay text-primary">
+            <h3 class="card-title">HOW WE WORK</h3>
+            <p class="card-subtitle light-shadow">Find out more about us.</p>
           </div>
-          <div class="card-block">
-            <p>
-              <button type="button" class="btn btn-danger btn-block btn-lg" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-film"></i> Learn More</button>
+        </div>
+        <div class="card-block">
+          <p>
+            <button type="button" class="btn btn-danger btn-block btn-lg" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-film"></i> Learn More</button>
+          </p>
+          <p class="card-text dropcaps"><strong>His R.A.F.T.</strong> is a Central Valley nonprofit corporation that has been serving the community for <strong>over 30 years</strong>. Our mission is to provide those in our area with the means to serve the underfed.</p>
+        </div>
+      </div>
+      
+      <!-- Disclaimer Card -->
+      <div class="card card-block card-warning text-uppercase text-danger">
+        <p class="card-text">
+          <p class="text-muted lead">
+            We only provide food to 501(c)(3) nonprofit organizations. We do not give directly to the public.
+          </p>
+          <p class="font-weight-bold">
+            Contact your local emergency food bank if you are in need.
+          </p>
+        </p>
+      </div>
+
+      <!-- Donation/Mission Gift Card -->
+      <div class="card card-danger no-border">
+        <div class="relative">
+          <img src="assets/photos/card-3.jpg" alt="" class="img-fluid card-img-top">
+          <div class="card-img-overlay text-danger">
+            <h3 class="card-title">MISSION GIFT</h3>
+            <p class="card-subtitle light-shadow">Save time and pay online.</p>
+          </div>
+        </div>
+        <div class="card-block">
+          <p>
+            <button type="button" class="btn btn-primary btn-block btn-lg" disabled><i class="fa fa-fw fa-credit-card"></i> Coming Soon</button>
+          </p>
+          <p class="card-text dropcaps">In an effort to ease the burden on our affiliates, we will soon allow mission gift payments online. It is a safe and secure alternative to cash and check for our <b>food bank affiliates.</b> However, if you are looking to make a donation, please <a href="#" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
+        </div>
+      </div>
+
+      <!-- Info Card -->
+      <div class="card card-info">
+        <div class="card-block">
+          <p class="card-text">
+            <p class="lead">Open Everyday except Thursday and Sunday</p>
+            <p class="lead font-weight-bold">Hours: 9am to 2pm
+            <p class="lead">To discuss donating or receiving food for your nonprofit, speak with John or Diosa.</p>
+            <p class="lead">
+              <i class="fa fa-phone"></i> (209) 460-1044 <br>
+              <i class="fa fa-envelope"></i> hisraft@gmail.com <br>
             </p>
-            <p class="card-text dropcaps"><strong>His R.A.F.T.</strong> is a Central Valley nonprofit corporation that has been serving the community for <strong>over 30 years</strong>. Our mission is to provide those in our area with the means to serve the underfed.</p>
+          </p>
+        </div>
+        <div class="card-block">
+          <p class="lead">
+            <i class="fa fa-globe"></i> 2209 E. Main Street, Stockton, CA, 95205
+          </p>
+          <div class="google-maps">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12583.732456721693!2d-121.2588683!3d37.9553477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe0ecb70c0af2be2b!2sInterfaith+Food+Bank!5e0!3m2!1sen!2sus!4v1477702463442" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
       </div>
 
-      <!-- Card #2 -->
-      <div class="col-md-6">
-        <div class="card card-warning hover-shadow">
-          <div class="relative">
-            <img src="assets/photos/card-2.jpg" alt="" class="img-fluid card-img-top">
-            <div class="card-img-overlay text-warning">
-              <h3 class="card-title">CONTACT US</h3>
-              <p class="card-subtitle dark-shadow">Get in touch today</p>
-            </div>
-          </div>
-          <div class="card-block">
-            <p class="card-text">
-              <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Contact Us</button>
-            </p>
-            <p class="card-text dropcaps">We operate as a bulk distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
+      <!-- Contact Card-->
+      <div class="card card-warning no-border">
+        <div class="relative">
+          <img src="assets/photos/card-2.jpg" alt="" class="img-fluid card-img-top">
+          <div class="card-img-overlay text-warning">
+            <h3 class="card-title">CONTACT US</h3>
+            <p class="card-subtitle dark-shadow">Get in touch today</p>
           </div>
         </div>
-      </div>
-    
-      <!-- Card #3 -->
-      <div class="col-md-6">
-        <div class="card card-danger hover-shadow">
-          <div class="relative">
-            <img src="assets/photos/card-3.jpg" alt="" class="img-fluid card-img-top">
-            <div class="card-img-overlay text-danger">
-              <h3 class="card-title">MISSION GIFT</h3>
-              <p class="card-subtitle light-shadow">Save time and pay online.</p>
-            </div>
-          </div>
-          <div class="card-block">
-            <p>
-              <button type="button" class="btn btn-primary btn-block btn-lg" disabled><i class="fa fa-fw fa-credit-card"></i> Coming Soon</button>
-            </p>
-            <p class="card-text dropcaps">In an effort to ease the burden on our affiliates, we will soon allow mission gift payments online. It is a safe and secure alternative to cash and check for our <b>food bank affiliates.</b> However, if you are looking to make a donation, please <a href="#" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Second Row of Cards -->
-    <div class="card-deck">
-      <!-- Card #4 -->
-      <div class="card card-block card-info text-uppercase">
-        <p class="card-text">
-          <p class="small text-muted">We only provide food to 501(c)(3) nonprofit organizations. We do not give directly to the public. <span class="font-weight-bold">Contact your local emergency food bank if you are in need.</span></p>
-          <p class="lead">We're open from 9am to 2pm everyday (except Thursdays and Sundays)</p>
-          <p class="lead">To discuss donations or receiving food for your nonprofit, speak with John or Diosa.</p>
-          <p class="lead">
-            <i class="fa fa-phone"></i> (209) 460-1044 <br>
-            <i class="fa fa-envelope"></i> hisraft@gmail.com <br>
-            <i class="fa fa-globe"></i> 2209 E. Main Street, Stockton, CA, 95205
+        <div class="card-block">
+          <p class="card-text">
+            <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Contact Us</button>
           </p>
-        </p>
-      </div>
-      <!-- Card #5 -->
-      <div class="card card-block card-info">
-        <div class="google-maps">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12583.732456721693!2d-121.2588683!3d37.9553477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe0ecb70c0af2be2b!2sInterfaith+Food+Bank!5e0!3m2!1sen!2sus!4v1477702463442" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <p class="card-text dropcaps">We operate as a bulk distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
         </div>
       </div>
+
+    <!-- End of Card columns -->
     </div>
-  </div>
+    
   <!-- Image Carousel -->
-  <div class="jumbotron jumbotron-fluid bg-info">
-    <div class="container-fluid">
-      <h1 class="display-4 text-primary">EVENT GALLERY</h1>
-    </div>
-    <div id="img-carousel" class="img-carousel">
-      <div class="item"><img src="assets/photos/1.jpg" class="rounded" alt=""></div>
-      <div class="item"><img src="assets/photos/2.jpg" class="rounded" alt=""></div>
-      <div class="item"><img src="assets/photos/3.jpg" class="rounded" alt=""></div>
-      <div class="item"><img src="assets/photos/4.jpg" class="rounded" alt=""></div>
-      <div class="item"><img src="assets/photos/5.jpg" class="rounded" alt=""></div>
-      <div class="item"><img src="assets/photos/6.jpg" class="rounded" alt=""></div>
-      <div class="item"><img src="assets/photos/7.jpg" class="rounded" alt=""></div>
-    </div>
+  <div class="container-fluid mt-4">
+    <h1 class="display-4 text-primary">EVENT GALLERY</h1>
+  </div>
+  <div id="img-carousel" class="img-carousel">
+    <div class="item"><img src="assets/photos/1.jpg" class="rounded" alt=""></div>
+    <div class="item"><img src="assets/photos/2.jpg" class="rounded" alt=""></div>
+    <div class="item"><img src="assets/photos/3.jpg" class="rounded" alt=""></div>
+    <div class="item"><img src="assets/photos/4.jpg" class="rounded" alt=""></div>
+    <div class="item"><img src="assets/photos/5.jpg" class="rounded" alt=""></div>
+    <div class="item"><img src="assets/photos/6.jpg" class="rounded" alt=""></div>
+    <div class="item"><img src="assets/photos/7.jpg" class="rounded" alt=""></div>
   </div>
   <!-- Footer -->
-  <div class="navbar navbar-light bg-info navbar-full">
+  <div class="navbar navbar-light bg-transparent navbar-full">
     <div class="container-fluid">
       <p class="navbar-text text-muted">Crafted by: <a href="http://zerodaedalus.com"> <i class="fa fa-code"></i> Zero Daedalus</a></p>
     </div>
