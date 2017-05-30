@@ -30,7 +30,7 @@
     <div class="card-columns mt-4">
       <!-- Programs Card -->
       <div class="card card-outline-primary text-primary no-border no-hover">
-        <h5 class="card-title">
+        <h5 class="card-title text-center">
           We run several nonprofit programs in the community including:
         </h5>
         <ul class="lead">
@@ -42,30 +42,30 @@
       </div>
 
       <!-- How We Work Card -->
-      <div class="card card-primary no-border">
+      <div class="card card-danger no-border">
         <div class="relative">
           <img src="assets/photos/card-1.jpg" alt="" class="img-fluid card-img-top">
-          <div class="card-img-overlay text-primary">
+          <div class="card-img-overlay text-danger">
             <h3 class="card-title">HOW WE WORK</h3>
             <p class="card-subtitle light-shadow">Find out more about us.</p>
           </div>
         </div>
         <div class="card-block">
           <p>
-            <button type="button" class="btn btn-danger btn-block btn-lg" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-film"></i> Learn More</button>
+            <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#aboutModal"><i class="fa fa-film"></i> Learn More</button>
           </p>
           <p class="card-text dropcaps"><strong>His R.A.F.T.</strong> is a Central Valley nonprofit corporation that has been serving the community for <strong>over 30 years</strong>. Our mission is to provide those in our area with the means to serve the underfed.</p>
         </div>
       </div>
       
       <!-- Disclaimer Card -->
-      <div class="card card-block card-warning text-uppercase">
+      <div class="card card-block card-primary text-uppercase text-center">
         <div class="card-text">
-          <p class="text-muted">
+          <p class="">
             We only provide food to 501(c)(3) nonprofit organizations. We do not give directly to the public.
           </p>
-          <p class="lead">
-            Contact your local emergency food bank if you are in need.
+          <p class="lead font-weight-bold font-style-underline">
+            <u>Contact your local emergency food bank if you are in need.</u>
           </p>
         </div>
       </div>
@@ -87,8 +87,25 @@
         </div>
       </div>
 
+      <!-- Contact Card-->
+      <div class="card card-danger no-border">
+        <div class="relative">
+          <img src="assets/photos/card-2.jpg" alt="" class="img-fluid card-img-top">
+          <div class="card-img-overlay text-danger">
+            <h3 class="card-title">CONTACT US</h3>
+            <p class="card-subtitle dark-shadow">Get in touch today</p>
+          </div>
+        </div>
+        <div class="card-block">
+          <p class="card-text">
+            <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Contact Us</button>
+          </p>
+          <p class="card-text dropcaps">We operate as a bulk distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
+        </div>
+      </div>
+
       <!-- Info Card -->
-      <div class="card card-info">
+      <div class="card card-primary text-center">
         <div class="card-block">
           <div class="card-text">
             <p class="lead">Open Everyday except Thursday and Sunday</p>
@@ -107,23 +124,6 @@
           <div class="google-maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12583.732456721693!2d-121.2588683!3d37.9553477!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe0ecb70c0af2be2b!2sInterfaith+Food+Bank!5e0!3m2!1sen!2sus!4v1477702463442" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
-        </div>
-      </div>
-
-      <!-- Contact Card-->
-      <div class="card card-warning no-border">
-        <div class="relative">
-          <img src="assets/photos/card-2.jpg" alt="" class="img-fluid card-img-top">
-          <div class="card-img-overlay text-warning">
-            <h3 class="card-title">CONTACT US</h3>
-            <p class="card-subtitle dark-shadow">Get in touch today</p>
-          </div>
-        </div>
-        <div class="card-block">
-          <p class="card-text">
-            <button type="button" class="btn btn-success btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Contact Us</button>
-          </p>
-          <p class="card-text dropcaps">We operate as a bulk distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
         </div>
       </div>
 
@@ -159,7 +159,7 @@
         </div>
         <!-- About/Footer -->
         <div class="modal-footer">
-          <button type="button" id="aboutModalCTA" class="btn btn-lg btn-success" data-dismiss="modal"><i class="fa fa-send"></i> Contact Us</button>
+          <button type="button" id="aboutModalCTA" class="btn btn-lg btn-primary" data-dismiss="modal"><i class="fa fa-send"></i> Contact Us</button>
           <button type="button" class="btn btn-outline-warning" data-dismiss="modal"><i class="fa fa-close"></i> Exit</button>
         </div>
       </div>
@@ -168,7 +168,7 @@
   <!-- Contact Modal -->
   <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
-      <div class="modal-content bg-warning">
+      <div class="modal-content bg-danger">
         <!-- Contact/Body -->
         <div class="modal-body">
           <!-- contact form -->
@@ -207,7 +207,7 @@
               </div>
             </div>
             <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-send"></i> Send</button>
-            <button type="button" class="btn btn-outline-success" data-dismiss="modal"><i class="fa fa-close"></i> Exit</button>
+            <button type="button" class="btn btn-outline-warning" data-dismiss="modal"><i class="fa fa-close"></i> Exit</button>
           </form>
         </div>
       </div>
