@@ -9,3 +9,11 @@ $('#aboutModalCTA').on('click', function() {
     $('#aboutModal').off('hidden.bs.modal');
   });
 });
+
+$('#equipmentModalCTA').on('click', function() {
+  $('#contactModal').modal('show');
+  $('#equipmentModal').on('hidden.bs.modal', function() {
+    $('body').addClass('modal-open');
+    $('#equipmentModal').off('hidden.bs.modal');
+  });
+});

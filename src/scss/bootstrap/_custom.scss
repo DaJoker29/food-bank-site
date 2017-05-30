@@ -8,19 +8,19 @@ $enable-shadows     : true;
 $enable-gradients   : true;
 $enable-flex        : true;
 $enable-transitions : true;
-$enable-rounded     : false;
+// $enable-rounded     : false;
 
 $brand-warning : #F19F4D;
 $brand-primary : #4484CE;
 $brand-success : #F9CD00;
 $brand-danger  : #5cb85c;
-$brand-info    : #D9D9D9;
+// $brand-info    : #D9D9D9;
 
 $btn-success-color : #373a3c; // $gray-dark
 $btn-warning-color : #373a3c; // $gray-dark
 
 $font-family-sans-serif : 'Open Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$font-family-serif      :      'Gentium Basic', Georgia, "Times New Roman", Times, serif;
+$font-family-serif      : 'Gentium Basic', Georgia, "Times New Roman", Times, serif;
 $font-family-base       : $font-family-serif;
 
 $headings-font-family : $font-family-sans-serif;
