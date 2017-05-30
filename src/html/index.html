@@ -41,10 +41,22 @@
         </ul>
       </div>
 
+      <!-- Disclaimer Card -->
+      <div class="card card-block card-info text-uppercase text-center">
+        <div class="card-text">
+          <p class="">
+            We only provide food to 501(c)(3) nonprofit organizations. We do not give directly to the public.
+          </p>
+          <p class="lead font-weight-bold font-style-underline">
+            <u>Contact your local emergency food bank if you are in need.</u>
+          </p>
+        </div>
+      </div>
+
       <!-- How We Work Card -->
       <div class="card card-danger no-border">
         <div class="relative">
-          <img src="assets/photos/card-1.jpg" alt="" class="img-fluid card-img-top">
+          <img src="assets/photos/5.jpg" alt="" class="img-fluid card-img-top">
           <div class="card-img-overlay text-danger">
             <h3 class="card-title">HOW WE WORK</h3>
             <p class="card-subtitle light-shadow">Find out more about us.</p>
@@ -58,15 +70,38 @@
         </div>
       </div>
       
-      <!-- Disclaimer Card -->
-      <div class="card card-block card-info text-uppercase text-center">
-        <div class="card-text">
-          <p class="">
-            We only provide food to 501(c)(3) nonprofit organizations. We do not give directly to the public.
+      <!-- Equipment Card -->
+      <div class="card card-danger no-border">
+        <div class="relative">
+          <img src="assets/photos/card-1.jpg" alt="" class="img-fluid card-img-top">
+          <div class="card-img-overlay text-danger">
+            <h3 class="card-title text-uppercase">Equipment Restoration</h3>
+            <p class="card-subtitle light-shadow">and Reutilization</p>
+          </div>
+        </div>
+        <div class="card-block">
+          <p class="card-text dropcaps">Our focus from the beginning is to <span class="font-weight-bold">reduce the equipment costs</span> for nonprofit organizations. At the same time, we're making sure our donors receive the most out of their <span class="font-weight-bold">tax write off</span>. With the price of scrap steel at pennies per pound, weighed to the cost of preparation and processing, the "profit" made from scrapping isn't worth the effort.</p> 
+          <p class="card-text dropcaps">This program creates a viable alternative that provides companies with a great financial benefit and provides equipment to organizations in need.</p>
+          <p class="card-text">
+            <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#equipmentModal"><i class="fa fa-fw fa-wrench"></i> Learn More</button>
           </p>
-          <p class="lead font-weight-bold font-style-underline">
-            <u>Contact your local emergency food bank if you are in need.</u>
+        </div>
+      </div>
+
+      <!-- Contact Card-->
+      <div class="card card-danger no-border">
+        <div class="relative">
+          <img src="assets/photos/6.jpg" alt="" class="img-fluid card-img-top">
+          <div class="card-img-overlay text-danger">
+            <h3 class="card-title">CONTACT US</h3>
+            <p class="card-subtitle dark-shadow">Get in touch today</p>
+          </div>
+        </div>
+        <div class="card-block">
+          <p class="card-text">
+            <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Contact Us</button>
           </p>
+          <p class="card-text dropcaps">We operate as a bulk distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
         </div>
       </div>
 
@@ -84,23 +119,6 @@
             <button type="button" class="btn btn-primary btn-block btn-lg" disabled><i class="fa fa-fw fa-credit-card"></i> Coming Soon</button>
           </p>
           <p class="card-text dropcaps">In an effort to ease the burden on our affiliates, we will soon allow mission gift payments online. It is a safe and secure alternative to cash and check for our <b>food bank affiliates.</b> However, if you are looking to make a donation, please <a href="#" data-toggle="modal" data-target="#contactModal">contact us</a>.</p>
-        </div>
-      </div>
-
-      <!-- Contact Card-->
-      <div class="card card-danger no-border">
-        <div class="relative">
-          <img src="assets/photos/card-2.jpg" alt="" class="img-fluid card-img-top">
-          <div class="card-img-overlay text-danger">
-            <h3 class="card-title">CONTACT US</h3>
-            <p class="card-subtitle dark-shadow">Get in touch today</p>
-          </div>
-        </div>
-        <div class="card-block">
-          <p class="card-text">
-            <button type="button" class="btn btn-primary btn-block btn-lg" data-toggle="modal" data-target="#contactModal"><i class="fa fa-fw fa-send-o"></i> Contact Us</button>
-          </p>
-          <p class="card-text dropcaps">We operate as a bulk distributor to other nonprofit organizations. <strong>We do not give directly to the public.</strong> We also accept many types of donations from businesses. All donations are tax-deductible.</p>
         </div>
       </div>
 
@@ -139,8 +157,7 @@
     <div class="item"><img src="assets/photos/2.jpg" class="rounded" alt=""></div>
     <div class="item"><img src="assets/photos/3.jpg" class="rounded" alt=""></div>
     <div class="item"><img src="assets/photos/4.jpg" class="rounded" alt=""></div>
-    <div class="item"><img src="assets/photos/5.jpg" class="rounded" alt=""></div>
-    <div class="item"><img src="assets/photos/6.jpg" class="rounded" alt=""></div>
+    <div class="item"><img src="assets/photos/card-2.jpg" class="rounded" alt=""></div>
     <div class="item"><img src="assets/photos/7.jpg" class="rounded" alt=""></div>
   </div>
   <!-- Footer -->
@@ -161,6 +178,32 @@
         <div class="modal-footer">
           <button type="button" id="aboutModalCTA" class="btn btn-lg btn-primary" data-dismiss="modal"><i class="fa fa-send"></i> Contact Us</button>
           <button type="button" class="btn btn-outline-warning" data-dismiss="modal"><i class="fa fa-close"></i> Exit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Equipment Modal -->
+  <div class="modal fade" id="equipmentModal" tabindex="-1" role="dialog" aria-labelledby="equipmentModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content bg-danger">
+        <!-- Equipment/Body -->
+        <div class="modal-body lead">
+          <blockquote class="blockquote">
+            <i class="fa fa-quote-left"></i>
+            <br>
+            <p class="dropcaps"> What we offer is a single solution to removing your equipment as-is, at no cost to you or your company. Your company will receive a tax deduction at a fair rate, well above scrap prices, that in turn can save your business money on its taxes.</p>
+            <p class="dropcaps">On our end equipment is evaluated and restored to proper working condition. We have a stable of volunteer mechanics and forklift repair shops who help in this process. From this point, a non profit agency can apply for the equipment that has been refurbished. We evaluate their particular need and provide the necessary equipment in order for them to continue functioning properly. These nonprofit agencies must be certified with the state of California and must sign a contract stating that the equipment if for nonprofit use only and can be returned to the refurbishment program if no longer needed. This equipment is on loan to them as long as they need it. They may not sell it or give it to another organization. Along with the contract there is a deposit to ensure that the equipment will not be sold and the deposit will be refunded upon the return of the equipment in fully working order.</p>
+            <p class="dropcaps">His R.A.F.T. Inc. has over 32 years of providing help across the state and this is just the next step for us to help provide for even the smallest nonprofit organization.</p>
+            <p class="dropcaps">We hope you choose to donate with us.</p>
+            <i class="fa fa-quote-right pull-right"></i>
+            <br>
+            <footer class="blockquote-footer text-success"><cite>His R.A.F.T. Management</cite></footer>
+          </blockquote>
+          <!-- Equipment/Footer -->
+          <div class="modal-footer">
+            <button type="button" id="equipmentModalCTA" class="btn btn-lg btn-primary" data-dismiss="modal"><i class="fa fa-send"></i> Get in Touch</button>
+            <button type="button" class="btn btn-outline-warning" data-dismiss="modal"><i class="fa fa-close"></i> Exit</button>
+          </div>
         </div>
       </div>
     </div>
