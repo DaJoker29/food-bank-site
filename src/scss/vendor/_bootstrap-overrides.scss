@@ -1,4 +1,5 @@
 .card {
+  margin-bottom: $card-spacer-y;
   transition: .3s ease-in-out;
   img {
     filter: grayscale(80%);
