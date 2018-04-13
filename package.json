@@ -10,7 +10,8 @@
     "eslint": "eslint --config .eslintrc src/js",
     "preversion": "git checkout master && git merge --no-ff develop -m 'Pull changes for release bump'",
     "postversion": "git push && git push --tags && git checkout develop && git merge --no-ff master -m 'Sync Develop branch' && git push",
-    "dist": "git checkout master && git pull && grunt build"
+    "dist": "git checkout master && git pull && grunt build",
+    "start": "grunt"
   },
   "repository": {
     "url": "git+https://github.com/DaJoker29/food-bank-site.git",
@@ -22,12 +23,12 @@
   },
   "homepage": "http://raft.zerodaedalus.com",
   "dependencies": {
-    "autoprefixer": "^6.5.1",
-    "grunt": "^1.0.1",
-    "grunt-contrib-clean": "^1.0.0",
+    "autoprefixer": "6.7.7",
+    "grunt": "1.0.2",
+    "grunt-contrib-clean": "1.1.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-cssmin": "^1.0.2",
-    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-uglify": "2.3.0",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-eslint": "^19.0.0",
     "grunt-exec": "1.0.1",
