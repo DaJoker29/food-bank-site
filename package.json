@@ -1,10 +1,6 @@
 {
   "license": "MIT",
-<<<<<<< HEAD
   "version": "2.2.0",
-=======
-  "version": "2.1.6",
->>>>>>> 0913c9e6dfdcf7a7d5dc6423d0fd0767b7ac0619
   "name": "food-bank-site",
   "description": "A single page website that I designed for a local nonprofit.",
   "main": "Gruntfile.js",
